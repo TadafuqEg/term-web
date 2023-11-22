@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\ContactUsController;
+use App\Http\Controllers\ContactUsController as ContactUs;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use App\Http\Controllers\Dashboard\ContactUsController;
 |
 */
 
+Route::post('/contact-us',[ContactUs::class,'store'])->name('contact-us.store');
 
 Route::view('/dashboard/login','dashboard.login')->name('dashboard.login-form');
 Route::post('/dashboard/login',[AuthController::class,'login'])->name('dashboard.login');

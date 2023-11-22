@@ -26,44 +26,70 @@
       </ul>
     </nav>
     <!-- main-content -->
-    <div class="frame-main cont">
-
+    <form class="frame-main cont" method="post" action="{{route('contact-us.store')}}">
+      @csrf
       <div class="formm">
         <div class="card">
           <h2>Contact Us</h2>
           <div class="row">
             <div class="col">
               <div class="form-group">
-                <label>Your Name</label>
-                <input type="text">
+                <label>
+                  Your Name
+                  @if ($errors->has('name'))
+                    <span style="color:red;font-size: 14px;">( {{ $errors->first('name') }} )</span>
+                  @endif
+              </label>
+                <input type="text" name="name">
+              </div>
+              
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                <label>
+                  Your Email
+                  @if ($errors->has('email'))
+                    <span style="color:red;font-size: 14px;">( {{ $errors->first('email') }} )</span>
+                  @endif
+                </label>
+                <input type="text" name="email">
               </div>
             </div>
 
             <div class="col">
               <div class="form-group">
-                <label>Your Email</label>
-                <input type="text">
+                <label>
+                  Phone Number
+                  @if ($errors->has('phone_number'))
+                    <span style="color:red;font-size: 14px;">( {{ $errors->first('phone_number') }} )</span>
+                  @endif
+                </label>
+                <input type="text" name="phone_number">
               </div>
             </div>
 
             <div class="col">
               <div class="form-group">
-                <label>Phone Number</label>
-                <input type="text">
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="form-group">
-                <label>Company</label>
-                <input type="text">
+                <label>
+                  Company
+                  @if ($errors->has('company'))
+                    <span style="color:red;font-size: 14px;">( {{ $errors->first('company') }} )</span>
+                  @endif
+                </label>
+                <input type="text" name="company">
               </div>
             </div>
 
             <div class="col-message">
               <div class="form-group">
-                <label>Your Message</label>
-                <textarea></textarea>
+                <label>
+                  Your Message
+                  @if ($errors->has('message'))
+                    <span style="color:red;font-size: 14px;">( {{ $errors->first('message') }} )</span>
+                  @endif
+                </label>
+                <textarea name="message"></textarea>
               </div>
             </div>
 
