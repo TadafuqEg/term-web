@@ -28,6 +28,8 @@
     <!-- main-content -->
     <form class="frame-main cont" method="post" action="{{route('contact-us.store')}}">
       @csrf
+
+
       <div class="formm">
         <div class="card">
           <h2>Contact Us</h2>
@@ -60,9 +62,9 @@
             <div class="col">
               <div class="form-group">
                 <label>
-                  Phone Number
+                  Phone
                   @if ($errors->has('phone_number'))
-                    <span style="color:red;font-size: 14px;">( {{ $errors->first('phone_number') }} )</span>
+                    <span class="sp" style="color:red;font-size: 14px;">( {{ $errors->first('phone_number') }} )</span>
                   @endif
                 </label>
                 <input type="text" name="phone_number">
@@ -74,7 +76,7 @@
                 <label>
                   Company
                   @if ($errors->has('company'))
-                    <span style="color:red;font-size: 14px;">( {{ $errors->first('company') }} )</span>
+                    <span style="color:red;font-size: 12px;">( {{ $errors->first('company') }} )</span>
                   @endif
                 </label>
                 <input type="text" name="company">
@@ -89,16 +91,18 @@
                     <span style="color:red;font-size: 14px;">( {{ $errors->first('message') }} )</span>
                   @endif
                 </label>
-                <textarea name="message"></textarea>
+                <textarea name="message" id="xx"></textarea>
               </div>
             </div>
 
             <div class="col col-submit">
-              <input type="submit" value="Submit">
+              <input type="submit" value="Submit" />
             </div>
           </div>
         </div>
       </div>
+
+
       <div class="ppppp">
         <ul class="contact-ul">
           <li>
@@ -109,7 +113,7 @@
 
             </div>
           </li>
-          </li>
+          
           <li>
             <div class="trigger"><a><img src="{{asset("assets/imgs/location.png")}}" /></a>
             </div>
@@ -117,17 +121,27 @@
               <p>tadafuq location</p>
             </div>
           </li>
-      
-      </li>
-      <!-- <li><a><img src="./assets/imgs/location.png" /></a>
-        <p>tadafuq location</p>
-      </li> -->
-      <!-- <li><a><img src="./assets/imgs/phone.png" /></a><p>tadafuq Phone</p></li>
-                    <li><a><img src="./assets/imgs/whats.png" class="face" /></a><p>tadafuq Whatsapp</p></li>
-                    <li><a><img src="./assets/imgs/face.png" /></a><p>tadafuq Facebook</p></li>
-                    <li><a><img src="./assets/imgs/instgram.png" /></a><p>tadafuq instgram</p></li>
-                    <li><a><img src="./assets/imgs/twitter.png" /></a><p>tadafuq twitter</p></li>                   -->
-
+          <li>
+            <div class="trigger"><a href="https://www.facebook.com/term.infotech/"><img src="{{asset("assets/imgs/face.png")}}" /></a>
+            </div>
+            <div class="hidden-content">
+              <p>https://www.facebook.com/term.infotech/</p>
+            </div>
+          </li>
+          <li>
+            <div class="trigger"><a href="https://www.instagram.com/term.infotech/"><img src="{{asset("assets/imgs/instgram.png")}}" /></a>
+            </div>
+            <div class="hidden-content">
+              <p>https://www.instagram.com/term.infotech/</p>
+            </div>
+          </li>
+          <li>
+            <div class="trigger"><a href="https://www.tiktok.com/@term.infotech"><img src="{{asset("assets/imgs/tik.png")}}" /></a>
+            </div>
+            <div class="hidden-content">
+              <p>https://www.tiktok.com/@term.infotech</p>
+            </div>
+          </li>
       </ul>
     </div>
   </div>
@@ -142,6 +156,8 @@
   </div>
   </div>
 
+
+  
 
 
 
@@ -160,6 +176,12 @@
       })
     }
   </script>
+ <script>
+  var message = document.getElementById("xx")
+	function myFunction() {
+		alert("message send successfuly");
+	}
+</script>
   <!-- <script>
         function sendEmailDefault() {
             var email = "info@term.ae";

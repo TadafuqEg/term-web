@@ -154,6 +154,7 @@
                 vid.currentTime -= 0.1;
             }
         });
+        
         vid.addEventListener('ended', playNextVideo, true);
         function playNextVideo(e) {
             vid.classList.add('none');
