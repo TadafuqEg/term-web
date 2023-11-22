@@ -14,7 +14,7 @@ class ContactUsController extends Controller
         {
             return redirect()->route('dashboard.login-form');
         }
-        $contactUs = ContactUs::paginate(12);
+        $contactUs = ContactUs::orderBy('id','DESC')->paginate(12);
         return view('dashboard.contact-us.index',compact('contactUs'));
     }
 }
