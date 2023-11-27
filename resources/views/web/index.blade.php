@@ -41,7 +41,7 @@
         </div>
         <div class="video">
             <div id="v"></div>
-            <video class="web-vid" id="v0" tabindex="0" autobuffer="autobuffer" preload="none" src="{{asset('assets/imgs/Term Vid3.mp4')}}"
+            <video class="web-vid" id="v0" tabindex="0" autobuffer="autobuffer" preload="none" src="{{asset('assets/imgs/Term_Vid3.mp4')}}"
                 type="video/mp4" autoplay muted>
             </video>
         </div>
