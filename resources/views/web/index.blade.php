@@ -66,7 +66,7 @@
             </svg>
         </div>
         <div id="set-height"></div>
-        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="none" src="{{asset('assets/imgs/Term Vid32.mp4')}}" type="video/mp4" autoplay
+        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="none" src="{{asset('assets\imgs\term_vid32.webm')}}" type="video/mp4" autoplay
             muted>
         </video>
 
