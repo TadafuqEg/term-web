@@ -5,31 +5,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>term-contacts</title>
-  <link rel="stylesheet" href="{{asset("css/contact.css")}}" />
+  <link rel="stylesheet" href="{{asset("css/style.css")}}" />
+  <style>
+    body,
+    html {
+    background-color: #1A1A1A;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    overflow:auto !important;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+   }
+   .contactus{
+    background-image: url(/assets/imgs/img15.png);
+    width: 100%;
+    min-height: 120vh;
+    }
+  </style>
 </head>
 
 <body>
   <div class="page service per contactus">
-    <!-- nav -->
-    <nav class="services-nav">
-      <div class="logo-nav">
-        <a href="{{route('web.index')}}"><img src="{{asset("assets/imgs/logo.png")}}" /></a>
-      </div>
-      <div class="nav-btn" id="btn">
-        <img src="{{asset("assets/imgs/menu icon.png")}}" onclick="myFunction()" />
-      </div>
-      <ul class="nav-ul nav-ul2 remov" id="nav-ul">
-        <li><a href="{{route('web.about')}}">About</a></li>
-        <li><a href="{{route('web.services')}}">Services</a></li>
-        <li><a href="{{route('web.proficiencies')}}">Proficiencies</a></li>
-        <li class="active"><a>Contact Us</a></li>
-      </ul>
-    </nav>
+    <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                <a href="../index.html"><img src="{{asset("assets/imgs/logo.png")}}" /></a>
+              </div>
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <img src="{{asset("assets/imgs/menu icon.png")}}" />
+              </label>
+            </div>
+            
+            <div class="nav-links">
+                <a href="{{route('web.about')}}">About</a>
+                <a href="{{route('web.services')}}">Services</a>
+                <a href="{{route('web.proficiencies')}}">Proficiencies</a>
+                <a href="{{route('web.contact-us')}}" class="active">Contact Us</a>
+                <a href="{{route('web.getquotation')}}">Get Quotation</a>
+            </div>
+        </div>
     <!-- main-content -->
     <form class="frame-main cont" method="post" action="{{route('contact-us.store')}}">
       @csrf
-
-
       <div class="formm">
         <div class="card">
           <h2>Contact Us</h2>
@@ -182,14 +204,7 @@
 		alert("message send successfuly");
 	}
 </script>
-  <!-- <script>
-        function sendEmailDefault() {
-            var email = "info@term.ae";
-            var subject = "Test Email";
-            var msgBody = "Thank you for contacting us, we will get back to you in 24 hours!";
-            window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);
-        }
-    </script> -->
+ 
 </body>
 
 </html>
