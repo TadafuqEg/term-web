@@ -29,6 +29,12 @@ Route::get('quotations',function(){
 
 Route::get('countries',function(){
     return response()->json([
-        'data' => DB::select('select id,name,region_code from countries')
+        'data' => DB::select('SELECT id , name FROM `countries`')
+    ], 200);
+});
+
+Route::get('cities/{countryId}',function($countryId){
+    return response()->json([
+        'data' => DB::select('SELECT  id , name FROM `cities` where country_id=\''.$countryId.'\' ')
     ], 200);
 });
