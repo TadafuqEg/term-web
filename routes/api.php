@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\QuotationTitle;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Api\QuotationFormController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -38,3 +39,5 @@ Route::get('cities/{countryId}',function($countryId){
         'data' => DB::select('SELECT  id , name FROM `cities` where country_id=\''.$countryId.'\' ')
     ], 200);
 });
+
+Route::post('quotation/store',[QuotationFormController::class,'store']);
