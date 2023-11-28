@@ -59,7 +59,7 @@
     </style>
   </head>
   <body>
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <!-- <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
               <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -81,7 +81,7 @@
                   </ul>
               </div> --}}
           </div>
-      </nav>
+      </nav> -->
       <div class="container-fluid">
         <div class="container">
             <h2 class="py-5">Conatct Us</h2>

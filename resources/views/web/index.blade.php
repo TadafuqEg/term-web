@@ -90,7 +90,7 @@
                         <a href="{{route('web.services')}}">Services</a>
                         <a href="{{route('web.proficiencies')}}">Proficiencies</a>
                         <a href="{{route('web.contact-us')}}">Contact Us</a>
-                        <a href="./getquotation/getquotation.html">Get Quotation</a>
+                        <a href="{{route('web.getquotation')}}">Get Quotation</a>
                     </div>
                 </div>
                 
