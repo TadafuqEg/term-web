@@ -26,7 +26,7 @@
   padding:10px 0 !important;
   background:red;
   color:#fff;
-  margin-left:20%; !important;
+  margin-left:20% !important;
 }
 .all-flex{
     display:flex;
@@ -38,6 +38,18 @@
     position: absolute;
     content: "";
     top: 19px;
+}
+.fflex{
+  display:flex;
+  align-items:center !important;
+}
+.fflex .input2-plus{
+  width:400px !important;
+  margin-left:30px;
+  border:1px solid #000 !important;
+  text-align:center;
+  color:#000;
+
 }
          @media (max-width: 900px){
            .nav>.nav-btn {
@@ -288,16 +300,16 @@
                                     <div class="custom-select" style="width:200px;">
                                                 <select>
                                                     <option value="0">Select Language:</option>
-                                                    <option value="1">1 year</option>
-                                                    <option value="2">2 year</option>
-                                                    <option value="3">3 year</option>
-                                                    <option value="4">4 year</option>
-                                                    <option value="5">5 year</option>
-                                                    <option value="6">6 year</option>
-                                                    <option value="7">7 year</option>
-                                                    <option value="8">8 year</option>
-                                                    <option value="9">9 year</option>
-                                                    <option value="10">10 year</option>
+                                                    <option value="1">Arabic</option>
+                                                    <option value="2">English</option>
+                                                    <option value="3">French</option>
+                                                    <option value="4">spanish</option>
+                                                    <option value="5">CHINESE</option>
+                                                    <option value="6">BENGALI</option>
+                                                    <option value="7">HINDI</option>
+                                                    <option value="8">PORTUGUESE</option>
+                                                    <option value="9">RUSSIAN</option>
+                                                    <option value="10">JAPANESE</option> 
                                                 </select>
                                     </div>
                                     
@@ -312,7 +324,6 @@
                         </div>
                     </li>
 
-
                     <li class="step">
                         <div class="step-title waves-effect waves-dark">Step 6</div>
                         <div class="step-content">
@@ -320,26 +331,50 @@
                                 <div class='form-field col s12'>
                                     <p class="keywords">Type of Data :</p>
 
-                                    <p>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox19' type="checkbox" class="filled-in" id="checkbox19"
                                             value='checkbox19' />
                                         <label for="checkbox19" class="checkbox1">Branding speaking</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="brand" placeholder="Branding speaking" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox20' type="checkbox" class="filled-in" id="checkbox20"
                                             value='checkbox20' />
                                         <label for="checkbox20" class="checkbox1">Branding speaking + Comment</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="brand" placeholder="Branding speaking + Comment" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox21' type="checkbox" class="filled-in" id="checkbox21"
                                             value='checkbox21' />
                                         <label for="checkbox21" class="checkbox1">Branding & Web speaking</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="brand" placeholder="Branding & Web speaking" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox22' type="checkbox" class="filled-in" id="checkbox22"
                                             value='checkbox22' />
                                         <label for="checkbox22" class="checkbox1">Web speaking + comments</label>
-                                    </p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="brand" placeholder="Web speaking + comments" />
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                             <div class="step-actions">
@@ -543,6 +578,7 @@
     }
     
     </script>
+    
     <script>
         $(document).ready(function () {
             $('.stepper').activateStepper();
