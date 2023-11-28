@@ -51,12 +51,70 @@
   color:#000;
 
 }
+.step2{
+    position: absolute;
+    bottom: -80px !important;
+}
+.step3{
+    position: absolute;
+    bottom: -140px !important;
+}
          @media (max-width: 900px){
            .nav>.nav-btn {
               display: inline-block;
               position: absolute;
               right: 40px;
               top: 35px;
+           }
+           .active {
+              background-color: #fff !important;
+              border: none !important;
+              height: 100%;
+            }
+            .step-actions {
+               position: relative;
+               width: 100%;
+             }
+             ul.stepper.horizontal .step-content {
+             padding: 0px 0px 75px 0px !important;
+             }
+             [type="checkbox"]+label {
+              position: relative;
+              padding-left: 17px !important;
+              font-size:13px !important;
+             }
+             [type="checkbox"].filled-in+label:before, [type="checkbox"].filled-in+label:after {
+               content: '';
+               left: -8px !important;
+             }
+             .select-items div, .select-selected { 
+                width: 200px;
+             }
+             
+             .all-flex {
+              display: flex;
+              width: 100%;
+            }
+            .fflex {
+              display: flex;
+              align-items: start !important;
+              flex-direction: column;
+              justify-content: start !important;
+            }
+            .fflex .input2-plus {
+             width: 270px !important;
+            }
+            .step2,.step3 {
+              bottom: 0px !important;
+            }
+            .keywords {
+             font-size: 35px;
+            }
+         }
+         @media(max-width:767px){
+            
+            
+            
          }
         
     </style>
@@ -328,6 +386,7 @@
                         <div class="step-title waves-effect waves-dark">Step 6</div>
                         <div class="step-content">
                             <div class="row">
+
                                 <div class='form-field col s12'>
                                     <p class="keywords">Type of Data :</p>
 
@@ -364,6 +423,7 @@
                                         </div>
                                         
                                     </div>
+
                                     <div class="fflex">
                                         <div class="inputs">
                                         <input name='checkbox22' type="checkbox" class="filled-in" id="checkbox22"
@@ -376,8 +436,9 @@
                                         
                                     </div>
                                 </div>
+
                             </div>
-                            <div class="step-actions">
+                            <div class="step-actions step2">
                                 <button class="waves-effect waves-dark btn next-step">CONTINUE</button>
                                 <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
                             </div>
@@ -391,35 +452,66 @@
                                 <div class='form-field col s12'>
                                     <p class="keywords">Analysis + :</p>
 
-                                    <p>
+                                    
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox23' type="checkbox" class="filled-in" id="checkbox23"
                                             value='checkbox23' />
                                         <label for="checkbox23" class="checkbox1">Sentiment Analysis</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="Sentiment" placeholder="Sentiment Analysis" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox24' type="checkbox" class="filled-in" id="checkbox24"
                                             value='checkbox24' />
                                         <label for="checkbox24" class="checkbox1">Semantic Analysis</label>
-                                    </p>
-                                    <p>
-                                        <input name='checkbox25' type="checkbox" class="filled-in" id="checkbox25"
-                                            value='checkbox25' />
-                                        <label for="checkbox25" class="checkbox1">Authors / Influence Analysis</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="Semantic" placeholder="Semantic Analysis" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
+                                        <input name='checkbox21' type="checkbox" class="filled-in" id="checkbox21"
+                                            value='checkbox21' />
+                                        <label for="checkbox21" class="checkbox1">Branding & Web speaking</label>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="speaking" placeholder="Branding & Web speaking" />
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox26' type="checkbox" class="filled-in" id="checkbox26"
                                             value='checkbox26' />
                                         <label for="checkbox26" class="checkbox1">Categorization by themes</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="themes" placeholder="Categorization by themes" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox27' type="checkbox" class="filled-in" id="checkbox27"
                                             value='checkbox27' />
                                         <label for="checkbox27" class="checkbox1">Categorization by types</label>
-                                    </p>
-                                    
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="types" placeholder="Categorization by types" />
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                            <div class="step-actions">
+                            <div class="step-actions step3">
                                 <button class="waves-effect waves-dark btn next-step"
                                     data-validator="validateStepOne">CONTINUE</button>
                                 <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
@@ -434,34 +526,66 @@
                                 <div class='form-field col s12'>
                                     <p class="keywords">Reports :</p>
 
-                                    <p>
+                               
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox28' type="checkbox" class="filled-in" id="checkbox28"
                                             value='checkbox28' />
                                         <label for="checkbox28" class="checkbox1">Real time alerts</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="Real" placeholder="Real time alerts" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox29' type="checkbox" class="filled-in" id="checkbox29"
                                             value='checkbox29' />
                                         <label for="checkbox29" class="checkbox1">Automatic Report</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="Automatic" placeholder="Automatic Report" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox30' type="checkbox" class="filled-in" id="checkbox30"
                                             value='checkbox30' />
                                         <label for="checkbox30" class="checkbox1">Personalised Report</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="Personalised" placeholder="Personalised Report" />
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox31' type="checkbox" class="filled-in" id="checkbox31"
                                             value='checkbox31' />
                                         <label for="checkbox31" class="checkbox1">Personalised Comparative report</label>
-                                    </p>
-                                    <p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="Comparative" placeholder="Personalised Comparative report" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="fflex">
+                                        <div class="inputs">
                                         <input name='checkbox32' type="checkbox" class="filled-in" id="checkbox32"
                                             value='checkbox32' />
                                         <label for="checkbox32" class="checkbox1">Consulting review</label>
-                                    </p>
+                                        </div>
+                                        <div class="inutts">
+                                        <input class="input2-plus" for="Consulting" placeholder="Consulting review" />
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                            <div class="step-actions">
+                            <div class="step-actions step3">
                                 <button class="waves-effect waves-dark btn next-step">CONTINUE</button>
                                 <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
                             </div>

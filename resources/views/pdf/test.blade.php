@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .in-pt{
+            padding:10px
+        }
+        .checkbox1{
+            margin-top:-20px !important;
+        }
+    </style>
 
 </head>
 <body>
@@ -14,7 +22,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords" style="font-size:40px;color:red;margin-left:20px">Keywords :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Keywords :</p>
 
                     <p>
                         <input name='checkbox1' type="checkbox" class="filled-in" id="checkbox1"
@@ -42,7 +50,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Duration :</p>
+                    <p class="keywords" style="font-size:40px;color:red;" >Duration :</p>
 
                     <div class="flex-boxes">
                         <div class="first-boxes">
@@ -80,26 +88,11 @@
                                 <label for="checkbox10" class="checkbox1">1 year</label>
                             </p>
                             <p class="seconed-flex">
-                                
-                                
-                                <div class="custom-select" style="width:200px;">
-                                    <input name='checkbox11' type="checkbox" class="filled-in" id="checkbox11"
+                            <input name='checkbox11' type="checkbox" class="filled-in" id="checkbox11"
                                     value='checkbox11' />
-                                    <label for="checkbox11" class="checkbox1">more years</label>
-                                <select>
-                                    <option value="0">Select Year:</option>
-                                    <option value="1">1 year</option>
-                                    <option value="2">2 year</option>
-                                    <option value="3">3 year</option>
-                                    <option value="4">4 year</option>
-                                    <option value="5">5 year</option>
-                                    <option value="6">6 year</option>
-                                    <option value="7">7 year</option>
-                                    <option value="8">8 year</option>
-                                    <option value="9">9 year</option>
-                                    <option value="10">10 year</option>
-                                </select>
-                            </div>
+                                    <label for="checkbox11" class="checkbox1">more years  <p style="color:red;"><span style="font-weight:bold;">Answer:</span>10 years</p></label>
+                                    
+                                    
                             </p>
                         </div>
                     </div>
@@ -109,7 +102,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Geolocation :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Geolocation :</p>
                    
                     <p class="seconed-flex">
                                 
@@ -117,10 +110,8 @@
                         <div class="custom-select" style="width:200px;">
                             <input name='checkbox12' type="checkbox" class="filled-in" id="checkbox12"
                             value='checkbox12' />
-                            <label for="checkbox12" class="checkbox1">Country</label>
-                        <select id="selectCountry" name="selectCountry">
-                            <option value="">Choose Country</option>
-                        </select>
+                            <label for="checkbox12" class="checkbox1">Country <p style="color:red;"><span style="font-weight:bold;">Answer:</span>country name</p></label>
+                             
                     </div>
                     </p>
                     <p>
@@ -139,7 +130,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Sources :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Sources :</p>
 
                     <p>
                         <div class="all-flex">
@@ -148,15 +139,8 @@
                         <div class="custom-select" style="width:200px;">
                             <input name='checkbox15' type="checkbox" class="filled-in" id="checkbox15"
                             value='checkbox15' />
-                        <label for="checkbox15" class="checkbox1">Social Media</label>
-                                <select>
-                                    <option value="0">Select social media</option>
-                                    <option value="1">Facebook</option>
-                                    <option value="2">instgram</option>
-                                    <option value="3">Tik Tok</option>
-                                    <option value="4">X</option>
-                                    
-                                </select>
+                        <label for="checkbox15" class="checkbox1">Social Media <p style="color:red;"><span style="font-weight:bold;">Answer:</span>social media icon</p></label>
+                                
                         </div>
                         </div>
                     </p>
@@ -177,23 +161,9 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Language :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Language :</p>
 
-                    <div class="custom-select edit" style="width:200px;">
-                                <select>
-                                    <option value="0">Select Language:</option>
-                                    <option value="1">Arabic</option>
-                                    <option value="2">English</option>
-                                    <option value="3">French</option>
-                                    <option value="4">spanish</option>
-                                    <option value="5">CHINESE</option>
-                                    <option value="6">BENGALI</option>
-                                    <option value="7">HINDI</option>
-                                    <option value="8">PORTUGUESE</option>
-                                    <option value="9">RUSSIAN</option>
-                                    <option value="10">JAPANESE</option> 
-                                </select>
-                    </div>
+                    <p style="color:red;"><span style="font-weight:bold;">Answer:</span>choose language</p>
                     
                 </div>
             </td>
@@ -201,7 +171,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Type of Data :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Type of Data :</p>
 
                     <p>
                         <input name='checkbox19' type="checkbox" class="filled-in" id="checkbox19"
@@ -237,7 +207,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Analysis + :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Analysis + :</p>
 
                     <p>
                         <input name='checkbox23' type="checkbox" class="filled-in" id="checkbox23"
@@ -277,7 +247,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Reports :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Reports :</p>
 
                     <p>
                         <input name='checkbox28' type="checkbox" class="filled-in" id="checkbox28"
@@ -315,7 +285,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Interval / frequency :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Interval / frequency :</p>
 
                     <p>
                         <input name='checkbox33' type="checkbox" class="filled-in" id="checkbox33"
@@ -349,7 +319,7 @@
           <tr style="height:250px;">
             <td class="full" style="width: 100% !important;text-align: start;justify-content: start;padding: 10px;">
                 <div class='form-field'>
-                    <p class="keywords">Social Engineering :</p>
+                    <p class="keywords" style="font-size:40px;color:red;">Social Engineering :</p>
                     <p>
                         <input name='checkbox38' type="checkbox" class="filled-in" id="checkbox38"
                             value='checkbox38' />
