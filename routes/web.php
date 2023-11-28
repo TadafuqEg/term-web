@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\ContactUsController;
 use App\Http\Controllers\ContactUsController as ContactUs;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,14 @@ Route::view('/visualize','web.visualize')->name('web.visualize');
 Route::view('/terms','web.terms')->name('web.terms');
 Route::view('/privacy','web.privacy')->name('web.privacy');
 // {{route('web.')}}
+
+Route::get('test-pdff',function(){
+    $data = [
+        'foo' => 'bar'
+    ];
+
+    
+    $pdf = Pdf::loadView('pdf.test', $data);
+    return $pdf->download('invoice.pdf');
+
+});
