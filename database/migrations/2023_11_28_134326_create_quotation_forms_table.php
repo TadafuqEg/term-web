@@ -13,13 +13,7 @@ return new class extends Migration
     {
         Schema::create('quotation_forms', function (Blueprint $table) {
             $table->id();
-
-            $table->unsignedBigInteger('quotation_list_id');
-
-            $table->foreign('quotation_list_id')
-                ->references('id')
-                ->on('quotation_lists')
-                ->onDelete('cascade');
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }
