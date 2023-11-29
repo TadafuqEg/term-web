@@ -24,6 +24,7 @@ Route::post('/dashboard/login',[AuthController::class,'login'])->name('dashboard
 Route::get('/dashboard/contact-us/list',[ContactUsController::class,'index'])->name('dashboard.contact-us.index');
 
 Route::view('/','web.index')->name('web.index');
+Route::view('/homepage','web.homepage')->name('web.homepage');
 Route::view('/about','web.about')->name('web.about');
 Route::view('/services','web.services')->name('web.services');
 Route::view('/proficiencies','web.proficiencies')->name('web.proficiencies');

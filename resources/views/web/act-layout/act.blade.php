@@ -14,7 +14,7 @@
         <!-- nav -->
         <nav>
             <div class="frame-logo">
-                <a href="{{route('web.index')}}"><img src="{{asset("assets/imgs/logo.png")}}" /></a>
+                <a href="{{route('web.homepage')}}"><img src="{{asset("assets/imgs/logo.png")}}" /></a>
             </div>
             <div class="f-nav-ul">
                 <ul>
