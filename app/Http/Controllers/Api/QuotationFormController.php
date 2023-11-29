@@ -14,9 +14,10 @@ class QuotationFormController extends Controller
     {
         if(is_array($request->quotation_list) && count($request->quotation_list) > 0)
         {
-            $faker = \Faker\Factory::create();
             $quotationForm = QuotationForm::create([
-                'email' => $faker->email
+                'email' => $request->email,
+                'name' => $request->name,
+                'phone' => $request->phone,
             ]);
             foreach($request->quotation_list as $list)
             {

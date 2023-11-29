@@ -9,5 +9,9 @@ use App\Models\QuotationList;
 
 class QuotationController extends Controller
 {
-    //
+    public function modify()
+    {
+        $quotations  = QuotationTitle::with('list')->get();
+        return view('dashboard.quotations.modify',compact('quotations'));
+    }
 }
