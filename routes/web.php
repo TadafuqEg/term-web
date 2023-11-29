@@ -5,6 +5,7 @@ use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\ContactUsController;
 use App\Http\Controllers\Dashboard\QuotationController as QuotationDashboard;
 use App\Http\Controllers\Dashboard\QuotationFromController as QuotationFormDashboard;
+use App\Http\Controllers\QuotationController as QuotationWeb;
 
 use App\Http\Controllers\ContactUsController as ContactUs;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -36,7 +37,7 @@ Route::view('/about','web.about')->name('web.about');
 Route::view('/services','web.services')->name('web.services');
 Route::view('/proficiencies','web.proficiencies')->name('web.proficiencies');
 Route::view('/contact-us','web.contact-us')->name('web.contact-us');
-Route::view('/getquotation','web.getquotation')->name('web.getquotation');
+Route::get('/getquotation',[QuotationWeb::class,'quotation'])->name('web.getquotation');
 Route::view('/act','web.act')->name('web.act');
 Route::view('/act-andmore','web.act-andmore')->name('web.act-andmore');
 Route::view('/act-more','web.act-more')->name('web.act-more');
