@@ -662,7 +662,10 @@
                 </div>
 
             </section>
-
+            <!-- pluse button -->
+                <div class='paluse-container'>
+                <a href="{{route('web.getquotation')}}"><span class='pulse-button'>Quotation</span></a>
+                </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

@@ -36,7 +36,7 @@
         </div>
 
 
-
+       
         <div class="about-main-content">
             <section class="intro">
                 <div class="slider">
@@ -117,9 +117,12 @@
                         <img src="{{asset("assets/imgs/circle.png")}}" />
                     </div>
                 </div>
-
+                <!-- pluse button -->
+                <div class='paluse-container'>
+                <a href="{{route('web.getquotation')}}"><span class='pulse-button'>Quotation</span></a>
+                </div>
             </section>
-
+          
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

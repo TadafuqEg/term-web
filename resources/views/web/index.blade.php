@@ -107,6 +107,10 @@
                     <p class="pic-bt2">Join Forces to<br />
                         Create a New Era</p>
                 </div>
+                <!-- pluse button -->
+                <div class='paluse-container'>
+                <a href="{{route('web.getquotation')}}"><span class='pulse-button'>Quotation</span></a>
+                </div>
             </div>
             <div class="home-content">
                 <div class="circle-img">

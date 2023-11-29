@@ -51,6 +51,17 @@
   color:#000;
 
 }
+.f-flex{
+    display:flex;
+}
+.f-flex input{
+    width:50%;
+    margin-top:-30px;
+    margin-left:20px;
+}
+.f-flex label{
+    border:0;
+}
 .step2{
     position: absolute;
     bottom: -80px !important;
@@ -634,17 +645,45 @@
                             </div>
                         </div>
                     </li>
-
                     <li class="step">
-                        <div class="step-title waves-effect waves-dark">Step 10</div>
+                        <div class="step-title waves-effect waves-dark">Step 9</div>
                         <div class="step-content">
                             <div class="row">
                                 <div class='form-field col s12'>
-                                    <p class="keywords">Social Engineering :</p>
+                                <p class="keywords">Social Engineering :</p>
                                     <p>
                                         <input name='checkbox38' type="checkbox" class="filled-in" id="checkbox38"
                                             value='checkbox38' />
                                         <label for="checkbox38" class="checkbox1">on demand (<a href="{{route('web.contact-us')}}">please contact us</a>)</label>
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                            <div class="step-actions">
+                                <button class="waves-effect waves-dark btn next-step"
+                                    data-validator="validateStepOne">CONTINUE</button>
+                                <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="step">
+                        <div class="step-title waves-effect waves-dark">Step 11</div>
+                        <div class="step-content">
+                            <div class="row">
+                                <div class='form-field col s12'>
+                                    <p class="keywords">Contact Information</p>
+                                    <p class="f-flex">
+                                        <label for="checkbox39">Name :</label>
+                                        <input type="text" placeholder="Your Name" /> 
+                                    </p>
+                                    <p class="f-flex">
+                                        <label for="checkbox40">Email</label>
+                                        <input type="text" placeholder="Your Email" /> 
+                                    </p>
+                                    <p class="f-flex">
+                                        <label for="checkbox40">Phone</label>
+                                        <input type="text" placeholder="Your Phone" /> 
                                     </p>
                                     
                                 </div>
@@ -659,6 +698,7 @@
                 </ul>
             </form>
         </div>
+        
     </div> 
     </div>
     </div>
