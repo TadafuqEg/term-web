@@ -22,6 +22,9 @@ class QuotationFormRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
             'quotation_list' => 'required|array',
             'quotation_list.*.id' => 'required',
             'quotation_list.*.value' => 'nullable'
