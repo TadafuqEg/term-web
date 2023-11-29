@@ -31,6 +31,7 @@ Route::get('/dashboard/quotations-forms/list',[QuotationFormDashboard::class,'li
 
 
 Route::view('/','web.index')->name('web.index');
+Route::view('/homepage','web.homepage')->name('web.homepage');
 Route::view('/about','web.about')->name('web.about');
 Route::view('/services','web.services')->name('web.services');
 Route::view('/proficiencies','web.proficiencies')->name('web.proficiencies');

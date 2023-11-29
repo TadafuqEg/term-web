@@ -9,7 +9,7 @@
 <body>
     <div class="privacy">
         <div class="logo">
-            <img src="{{asset('assets/imgs/logo.png')}}" />
+            <a href="{{route('web.homepage')}}"><img src="{{asset('assets/imgs/logo.png')}}" /></a>
         </div>
         <div class="main-content">
             <h3>Privacy Policy</h3>

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}" />
-    
     <style>
         #set-height {
             display: block;
@@ -107,6 +106,10 @@
                         Technology and Elka</p>
                     <p class="pic-bt2">Join Forces to<br />
                         Create a New Era</p>
+                </div>
+                <!-- pluse button -->
+                <div class='paluse-container'>
+                <a href="{{route('web.getquotation')}}"><span class='pulse-button'>Quotation</span></a>
                 </div>
             </div>
             <div class="home-content">

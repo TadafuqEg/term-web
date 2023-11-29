@@ -32,7 +32,7 @@
             <input type="checkbox" id="nav-check">
             <div class="nav-header">
               <div class="nav-title">
-                <a href="../index.html"><img src="{{asset("assets/imgs/logo.png")}}" /></a>
+                <a href="{{route('web.homepage')}}"><img src="{{asset("assets/imgs/logo.png")}}" /></a>
               </div>
             </div>
             <div class="nav-btn">
@@ -165,6 +165,10 @@
             </div>
           </li>
       </ul>
+    </div>
+    <!-- pluse button -->
+    <div class='paluse-container'>
+    <a href="{{route('web.getquotation')}}"><span class='pulse-button'>Quotation</span></a>
     </div>
   </div>
   <div class="footer">

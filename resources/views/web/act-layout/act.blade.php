@@ -7,26 +7,38 @@
     <title>@stack('act-page-title')</title>
     <!-- css -->
     <link rel="stylesheet" href="{{asset('css/actions.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
 </head>
 
 <body>
     <div class="page @stack('act-page-background')">
         <!-- nav -->
-        <nav>
-            <div class="frame-logo">
-                <a href="{{route('web.index')}}"><img src="{{asset("assets/imgs/logo.png")}}" /></a>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                <a href="{{route('web.homepage')}}"><img src="{{asset("assets/imgs/logo.png")}}" /></a>
+              </div>
             </div>
-            <div class="f-nav-ul">
-                <ul>
-                    <li class="li-1"><a href="{{route('web.about')}}">About</a></li>
-                    <li class="show"><a href="{{route('web.services')}}">Services</a></li>
-                    <li class="mob"><a href="{{route('web.act')}}">Act</a></li>
-                    <li class="li-2"><a href="{{route('web.proficiencies')}}">Proficiencies</a></li>
-                    <li class="li-3"><a href="{{route('web.contact-us')}}">contact Us</a></li>
-                </ul>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <img src="{{asset("assets/imgs/menu icon.png")}}" />
+              </label>
             </div>
-        </nav>
+            
+            <div class="nav-links">
+                <a href="{{route('web.about')}}">About</a>
+                <a href="{{route('web.services')}}" class="active">Services</a>
+                <a href="{{route('web.proficiencies')}}">Proficiencies</a>
+                <a href="{{route('web.contact-us')}}">Contact Us</a>
+                <a href="{{route('web.getquotation')}}">Get Quotation</a>
+            </div>
+        </div>
         @yield('content')
+        <!-- pluse button -->
+        <div class='paluse-container'>
+        <a href="{{route('web.getquotation')}}"><span class='pulse-button'>Quotation</span></a>
+        </div>
     </div>
 </body>
 
