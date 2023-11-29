@@ -11,4 +11,9 @@ class QuotationForm extends Model
 
     protected $table = 'quotation_forms';
     protected $guarded = [];
+
+    public function from_details()
+    {
+        return $this->hasMany(QuotationFormDetails::class, 'quotation_form_id');
+    }
 }

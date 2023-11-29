@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\ContactUsController;
+use App\Http\Controllers\Dashboard\QuotationController as QuotationDashboard;
+use App\Http\Controllers\Dashboard\QuotationFromController as QuotationFormDashboard;
+
 use App\Http\Controllers\ContactUsController as ContactUs;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -22,6 +25,10 @@ Route::post('/contact-us',[ContactUs::class,'store'])->name('contact-us.store');
 Route::view('/dashboard/login','dashboard.login')->name('dashboard.login-form');
 Route::post('/dashboard/login',[AuthController::class,'login'])->name('dashboard.login');
 Route::get('/dashboard/contact-us/list',[ContactUsController::class,'index'])->name('dashboard.contact-us.index');
+Route::get('/dashboard/quotations/modify',[QuotationDashboard::class,'modify'])->name('dashboard.quotation.modify');
+Route::get('/dashboard/quotations-forms/list',[QuotationFormDashboard::class,'list'])->name('dashboard.quotation-form.index');
+
+
 
 Route::view('/','web.index')->name('web.index');
 Route::view('/about','web.about')->name('web.about');
