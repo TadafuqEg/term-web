@@ -163,7 +163,165 @@
             <form>
                 <ul class="stepper parallel horizontal">
 
-                    <li class="step active">
+                    @foreach($quotations as $index => $quotation)
+                    <li class="step @if($index == 0 ) active @endif">
+                        <div class="step-title waves-effect waves-dark">Step {{$index+1}}</div>
+                        <div class="step-content">
+                            <div class="row">
+                                <div class='form-field col s12'>
+                                    <p class="keywords">{{$quotation->name}} :</p>
+                                    <div class="flex-boxes">
+                                        <div class="first-boxes">
+                                            @foreach($quotation['list'] as $index2 =>  $list)
+                                                @if($index2 <= 3)
+                                                <div class="inputs">
+                                                    <p>
+                                                        <input name='checkbox1' type="checkbox" class="filled-in" id="checkbox{{$index2.'-'.$index}}"
+                                                            value='checkbox1' />
+                                                        <label for="checkbox{{$index2.'-'.$index}}" class="checkbox{{$index2.'-'.$index}}">{{$list['title']}}</label>
+                                                    </p>
+                                                    @if($list['type']  == 'dropdown_menu')
+                                                    <div class="custom-select" style="width:200px;">
+                                                        <select>
+                                                            <option value="0">Select social media</option>
+                                                            <option value="Facebook">Facebook</option>
+                                                            <option value="instgram">instgram</option>
+                                                            <option value="Tik Tok">Tik Tok</option>
+                                                            <option value="X">X</option>
+                                                        </select>
+                                                    </div>
+                                                    @endif
+                                                    @if($list['type']  == 'country')
+                                                    <div class="custom-select" style="width:200px;">
+                                                        <select>
+                                                            @foreach($countries as $country)
+                                                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    @endif
+                                                    @if($list['type']  == 'years')
+                                                    <div class="custom-select" style="width:200px;">
+                                                        <select>
+                                                            @for($i=1;$i<=10;$i++)
+                                                                <option value="{{$i}}">{{$i}}</option>
+                                                            @endfor
+                                                        </select>
+                                                    </div>
+                                                    @endif
+                                                    @if($list['type']  == 'text')
+                                                        <div class="inutts">
+                                                            <input class="input2-plus" for="brand" placeholder="{{$list['title']}}" />
+                                                        </div>
+                                                    @endif
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                        <div class="second-box">
+                                            @foreach($quotation['list'] as $index2 =>  $list)
+                                                @if($index2 > 3)
+                                                    <p>
+                                                        <input name='checkbox1' type="checkbox" class="filled-in" id="checkbox{{$index2.'-'.$index}}"
+                                                            value='checkbox1' />
+                                                        <label for="checkbox{{$index2.'-'.$index}}" class="checkbox{{$index2.'-'.$index}}">{{$list['title']}}</label>
+                                                    </p>
+                                                    @if($list['type']  == 'dropdown_menu')
+                                                    <div class="custom-select" style="width:200px;">
+                                                        <select>
+                                                            <option value="Facebook">Facebook</option>
+                                                            <option value="instgram">instgram</option>
+                                                            <option value="Tik Tok">Tik Tok</option>
+                                                            <option value="X">X</option>
+                                                        </select>
+                                                    </div>
+                                                    @endif
+                                                    @if($list['type']  == 'country')
+                                                    <div class="custom-select" style="width:200px;">
+                                                        <select>
+                                                            @foreach($countries as $country)
+                                                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    @endif
+                                                    @if($list['type']  == 'years')
+                                                    <div class="custom-select" style="width:200px;">
+                                                        <select>
+                                                            @for($i=1;$i<=10;$i++)
+                                                                <option value="{{$i}}">{{$i}}</option>
+                                                            @endfor
+                                                        </select>
+                                                    </div>
+                                                    @endif
+                                                    @if($list['type']  == 'text')
+                                                        <div class="inutts">
+                                                            <input class="input2-plus" for="brand" placeholder="{{$list['title']}}" />
+                                                        </div>
+                                                    @endif
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                    </div>
+
+                                    {{-- <p>
+                                        <input name='checkbox1' type="checkbox" class="filled-in" id="checkbox1"
+                                            value='checkbox1' />
+                                        <label for="checkbox1" class="checkbox1"> Keyword / Engineering restructioning</label>
+                                    </p>
+                                    <p>
+                                        <input name='checkbox2' type="checkbox" class="filled-in" id="checkbox2"
+                                            value='checkbox2' />
+                                        <label for="checkbox2" class="checkbox1">1-5</label>
+                                    </p>
+                                    <p>
+                                        <input name='checkbox3' type="checkbox" class="filled-in" id="checkbox3"
+                                            value='checkbox3' />
+                                        <label for="checkbox3" class="checkbox1">6-10</label>
+                                    </p>
+                                    <p>
+                                        <input name='checkbox4' type="checkbox" class="filled-in" id="checkbox4"
+                                            value='checkbox4' />
+                                        <label for="checkbox4" class="checkbox1">10+</label>
+                                    </p> --}}
+                                </div>
+                            </div>
+                            <div class="step-actions">
+                                <button class="waves-effect waves-dark btn next-step"
+                                    data-validator="validateStepOne">CONTINUE</button>
+                                <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+                            </div>
+                        </div>
+                    </li>
+                    @endforeach
+                    <li class="step">
+                        <div class="step-title waves-effect waves-dark">Step 11</div>
+                        <div class="step-content">
+                            <div class="row">
+                                <div class='form-field col s12'>
+                                    <p class="keywords">Contact Information</p>
+                                    <p class="f-flex">
+                                        <label for="checkbox39">Name :</label>
+                                        <input type="text" placeholder="Your Name" /> 
+                                    </p>
+                                    <p class="f-flex">
+                                        <label for="checkbox40">Email</label>
+                                        <input type="text" placeholder="Your Email" /> 
+                                    </p>
+                                    <p class="f-flex">
+                                        <label for="checkbox40">Phone</label>
+                                        <input type="text" placeholder="Your Phone" /> 
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                            <div class="step-actions">
+                                <input type="submit" class="waves-effect waves-dark btn" value="SUBMIT" />
+                                <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+                            </div>
+                        </div>
+                    </li>
+
+                    {{-- <li class="step active">
                         <div class="step-title waves-effect waves-dark">Step 1</div>
                         <div class="step-content">
                             <div class="row">
@@ -693,7 +851,7 @@
                                 <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
                             </div>
                         </div>
-                    </li>
+                    </li> --}}
 
                 </ul>
             </form>
