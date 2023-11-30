@@ -34,6 +34,13 @@ Route::get('countries',function(){
     ], 200);
 });
 
+
+Route::get('languages',function(){
+    return response()->json([
+        'data' => DB::select('SELECT id , name FROM `languages`')
+    ], 200);
+});
+
 Route::get('cities/{countryId}',function($countryId){
     return response()->json([
         'data' => DB::select('SELECT  id , name FROM `cities` where country_id=\''.$countryId.'\' ')
