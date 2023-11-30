@@ -160,7 +160,8 @@
         <h2 class="hh">Search</h2>
 
         <div class="selects">
-            <form>
+            <form method="post" action="{{route('web.quotation.store')}}">
+                @csrf
                 <ul class="stepper parallel horizontal">
 
                     @foreach($quotations as $index => $quotation)
@@ -176,33 +177,40 @@
                                                 @if($index2 <= 3)
                                                 <div class="inputs">
                                                     <p>
-                                                        <input name='checkbox1' type="checkbox" class="filled-in" id="checkbox{{$index2.'-'.$index}}"
-                                                            value='checkbox1' />
+                                                        <input  type="checkbox" name="quotation_list[{{$list['id']}}][id]" class="filled-in" id="checkbox{{$index2.'-'.$index}}"
+                                                            value='{{$list['id']}}' />
                                                         <label for="checkbox{{$index2.'-'.$index}}" class="checkbox{{$index2.'-'.$index}}">{{$list['title']}}</label>
                                                     </p>
                                                     @if($list['type']  == 'dropdown_menu')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select>
-                                                            <option value="0">Select social media</option>
+                                                        <select name="quotation_list[{{$list['id']}}][value]">
+                                                            @if($list['title'] == 'Languages')
+                                                            @foreach($languages as $language)
+                                                                <option value="{{$language->name}}">{{$language->name}}</option>
+                                                            @endforeach
                                                             <option value="Facebook">Facebook</option>
-                                                            <option value="instgram">instgram</option>
-                                                            <option value="Tik Tok">Tik Tok</option>
-                                                            <option value="X">X</option>
+                                                            @elseif($list['title'] ==  'Social Media')
+                                                                <option value="0">Select social media</option>
+                                                                <option value="Facebook">Facebook</option>
+                                                                <option value="instgram">instgram</option>
+                                                                <option value="Tik Tok">Tik Tok</option>
+                                                                <option value="X">X</option>
+                                                            @endif
                                                         </select>
                                                     </div>
                                                     @endif
                                                     @if($list['type']  == 'country')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select>
+                                                        <select name="quotation_list[{{$list['id']}}][value]">
                                                             @foreach($countries as $country)
-                                                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                                                <option value="{{$country->name}}">{{$country->name}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
                                                     @endif
                                                     @if($list['type']  == 'years')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select>
+                                                        <select name="quotation_list[{{$list['id']}}][value]">
                                                             @for($i=1;$i<=10;$i++)
                                                                 <option value="{{$i}}">{{$i}}</option>
                                                             @endfor
@@ -211,7 +219,7 @@
                                                     @endif
                                                     @if($list['type']  == 'text')
                                                         <div class="inutts">
-                                                            <input class="input2-plus" for="brand" placeholder="{{$list['title']}}" />
+                                                            <input class="input2-plus" for="brand" placeholder="{{$list['title']}}" name="quotation_list[{{$list['id']}}][value]" />
                                                         </div>
                                                     @endif
                                                 @endif
@@ -221,13 +229,13 @@
                                             @foreach($quotation['list'] as $index2 =>  $list)
                                                 @if($index2 > 3)
                                                     <p>
-                                                        <input name='checkbox1' type="checkbox" class="filled-in" id="checkbox{{$index2.'-'.$index}}"
-                                                            value='checkbox1' />
+                                                        <input  type="checkbox" name="quotation_list[{{$list['id']}}][id]" class="filled-in" id="checkbox{{$index2.'-'.$index}}"
+                                                        value='{{$list['id']}}' />
                                                         <label for="checkbox{{$index2.'-'.$index}}" class="checkbox{{$index2.'-'.$index}}">{{$list['title']}}</label>
                                                     </p>
                                                     @if($list['type']  == 'dropdown_menu')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select>
+                                                        <select name="quotation_list[{{$list['id']}}][value]">
                                                             <option value="Facebook">Facebook</option>
                                                             <option value="instgram">instgram</option>
                                                             <option value="Tik Tok">Tik Tok</option>
@@ -237,7 +245,7 @@
                                                     @endif
                                                     @if($list['type']  == 'country')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select>
+                                                        <select name="quotation_list[{{$list['id']}}][value]">
                                                             @foreach($countries as $country)
                                                                 <option value="{{$country->id}}">{{$country->name}}</option>
                                                             @endforeach
@@ -246,7 +254,7 @@
                                                     @endif
                                                     @if($list['type']  == 'years')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select>
+                                                        <select name="quotation_list[{{$list['id']}}][value]">
                                                             @for($i=1;$i<=10;$i++)
                                                                 <option value="{{$i}}">{{$i}}</option>
                                                             @endfor
@@ -255,7 +263,7 @@
                                                     @endif
                                                     @if($list['type']  == 'text')
                                                         <div class="inutts">
-                                                            <input class="input2-plus" for="brand" placeholder="{{$list['title']}}" />
+                                                            <input class="input2-plus" for="brand" placeholder="{{$list['title']}}" name="quotation_list[{{$list['id']}}][value]" />
                                                         </div>
                                                     @endif
                                                 @endif
@@ -264,7 +272,7 @@
                                     </div>
 
                                     {{-- <p>
-                                        <input name='checkbox1' type="checkbox" class="filled-in" id="checkbox1"
+                                        <input  type="checkbox" class="filled-in" id="checkbox1"
                                             value='checkbox1' />
                                         <label for="checkbox1" class="checkbox1"> Keyword / Engineering restructioning</label>
                                     </p>
@@ -301,15 +309,15 @@
                                     <p class="keywords">Contact Information</p>
                                     <p class="f-flex">
                                         <label for="checkbox39">Name :</label>
-                                        <input type="text" placeholder="Your Name" /> 
+                                        <input type="text" name="name" placeholder="Your Name" required /> 
                                     </p>
                                     <p class="f-flex">
                                         <label for="checkbox40">Email</label>
-                                        <input type="text" placeholder="Your Email" /> 
+                                        <input type="text" name="email" placeholder="Your Email" required /> 
                                     </p>
                                     <p class="f-flex">
                                         <label for="checkbox40">Phone</label>
-                                        <input type="text" placeholder="Your Phone" /> 
+                                        <input type="text" name="phone" placeholder="Your Phone" required /> 
                                     </p>
                                     
                                 </div>
@@ -329,7 +337,7 @@
                                     <p class="keywords">Keywords :</p>
 
                                     <p>
-                                        <input name='checkbox1' type="checkbox" class="filled-in" id="checkbox1"
+                                        <input  type="checkbox" class="filled-in" id="checkbox1"
                                             value='checkbox1' />
                                         <label for="checkbox1" class="checkbox1"> Keyword / Engineering restructioning</label>
                                     </p>
