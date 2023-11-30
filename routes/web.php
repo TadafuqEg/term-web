@@ -10,6 +10,7 @@ use App\Http\Controllers\QuotationFormController as QuotationFromWeb;
 
 use App\Http\Controllers\ContactUsController as ContactUs;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::post('/dashboard/login',[AuthController::class,'login'])->name('dashboard
 Route::get('/dashboard/contact-us/list',[ContactUsController::class,'index'])->name('dashboard.contact-us.index');
 Route::get('/dashboard/quotations/modify',[QuotationDashboard::class,'modify'])->name('dashboard.quotation.modify');
 Route::get('/dashboard/quotations-forms/list',[QuotationFormDashboard::class,'list'])->name('dashboard.quotation-form.index');
+Route::get('/dashboard/quotations-forms/export-pdf/{formId}',[QuotationFormDashboard::class,'exportPDF'])->name('dashboard.quotation-form.export.pdf');
 
 Route::post('quotation-form/store',[QuotationFromWeb::class,'store'])->name('web.quotation.store');
 
@@ -72,3 +74,7 @@ Route::get('test-pdff',function(){
 
 });
 
+Route::get('cities/{countryId}',function($countryId){
+    $cities = DB::select('SELECT  id , name FROM `cities` where country_id=\''.$countryId.'\' ');
+    return view('web.ajax.city-option');
+});

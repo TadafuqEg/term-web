@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('quotation_lists', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->enum('type',['normal','text','years','country','dropdown_menu'])->default('normal');
+            $table->enum('type',['normal','text','years','country','dropdown_menu','region'])->default('normal');
 
             $table->unsignedBigInteger('quotation_title_id');
 

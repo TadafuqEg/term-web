@@ -22,7 +22,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('quotations',function(){
-    $quotations  = QuotationTitle::with('list')->get();
+    $quotations  = QuotationTitle::with('list')->get()->map(function($row){
+        $row->list = $row->list->map(function($list){
+            $list->type = (string)$list->type;
+            return $list;
+        });
+        return $row;
+    });
     return response()->json([
         'data' => $quotations
     ], 200);
@@ -31,6 +37,13 @@ Route::get('quotations',function(){
 Route::get('countries',function(){
     return response()->json([
         'data' => DB::select('SELECT id , name FROM `countries`')
+    ], 200);
+});
+
+
+Route::get('languages',function(){
+    return response()->json([
+        'data' => DB::select('SELECT id , name FROM `languages`')
     ], 200);
 });
 
