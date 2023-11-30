@@ -15,7 +15,7 @@
             <h3>Privacy Policy</h3>
             <p class="date">Effective Date: 1-10-2023</p>
             <p class="thanks-msg">
-                Thank you for choosing ("Term”) Tadafuq Elka Reputation Management for your information technology needs. We are committed 
+                Thank you for choosing ("Term”) Term Elka Reputation Management for your information technology needs. We are committed 
                 to protecting your privacy and providing a secure and transparent experience. This Privacy Policy outlines our practices 
                 regarding the collection, use, and disclosure of your information when you use our services.
             </p>
@@ -84,7 +84,7 @@
             <h5>7. Contact Us:</h5>
             <p>
                 If you have any questions or concerns about this Privacy Policy, please contact us at <span><a>info@term.ae</a></span>  <br /><br />
-                By using our services, you agree to the terms outlined in this Privacy Policy. Thank you for trusting Term Tadafuq 
+                By using our services, you agree to the terms outlined in this Privacy Policy. Thank you for trusting Term Term 
                 Information Technology and Elka with your information.
             </p>
             
