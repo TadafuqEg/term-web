@@ -12,9 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // $this->call(UserSeeder::class);
-        // $this->call(ContactUsSeeder::class);
-        // $this->call(CountriesSeeder::class);
+        $this->call(UserSeeder::class);
+        $this->call(ContactUsSeeder::class);
         $this->call(\Lwwcas\LaravelCountries\Database\Seeders\LcDatabaseSeeder::class);
 
 
