@@ -13,9 +13,9 @@
         </div>
         <div class="main-content">
             <h3>Terms & Conditions:TERM</h3>
-            <h3>Tadafuq Elka Reputation Management</h3>
+            <h3>Term Elka Reputation Management</h3>
             <p>
-                <span>1. Term of Collaboration:</span>a. This collaboration (TERM) between Tadafuq Information Technology and Elka ("Parties")
+                <span>1. Term of Collaboration:</span>a. This collaboration (TERM) between Term Information Technology and Elka ("Parties")
                  shall commence on the effective date as mutually agreed upon and shall remain in force until terminated by either Party with 
                  a written notice of at least 30 days.
             </p>
@@ -26,14 +26,14 @@
 
             </p>
             <p>
-                <span>3. Responsibilities of Each Party:</span>a. Tadafuq Information Technology shall contribute its technical knowledge 
+                <span>3. Responsibilities of Each Party:</span>a. Term Information Technology shall contribute its technical knowledge 
                 and resources. b. Elka shall bring its visionary approach and strategic insights to the Collaboration. c. Both Parties shall 
                 work collaboratively to achieve the goals outlined in the collaboration agreement.
 
             </p>
             <p>
                 <span>4. Product Development:</span> a. The Parties agree to jointly develop and launch Products that showcase the combined 
-                capabilities of Tadafuq and Elka. b. All intellectual property rights related to the Products shall be jointly owned unless 
+                capabilities of Term and Elka. b. All intellectual property rights related to the Products shall be jointly owned unless 
                 otherwise specified in writing.
             </p>
             <p>
@@ -65,7 +65,7 @@
 
             <h5>Agreed and Accepted:</h5>
             <p class="zz">1-10-2023<br />
-                Tadafuq Information Technology Elka
+                Term Information Technology Elka
                 </p>
         </div>
     </div>

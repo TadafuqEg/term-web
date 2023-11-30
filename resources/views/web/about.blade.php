@@ -49,7 +49,7 @@
                                             <div class="face-6">
                                                 <div class="face-4">
                                                     <p class="about-fp">
-                                                        In a crucial and noteworthy development, Tadafuq Information
+                                                        In a crucial and noteworthy development, Term Information
                                                         Technology (TIT) and Elka, two important
                                                         entities within the technology sector, have recently engaged in
                                                         a merger agreement, therefore combining
@@ -77,7 +77,7 @@
                                         </div>
                                         <div class="mySlides2">
                                             <div class="face-4">
-                                                <h3 class="ab-h3">Tadafuq Information<br />
+                                                <h3 class="ab-h3">Term Information<br />
                                                     Technology and Elka</h3>
                                                 <p class="ab-p">Join Forces to<br />
                                                     Create a New Era</p>

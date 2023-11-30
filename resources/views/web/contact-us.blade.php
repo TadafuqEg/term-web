@@ -131,7 +131,7 @@
             <div class="trigger"><a href="mailto:info@term.ae"><img src="{{asset("assets/imgs/email.png")}}" class="mail" /></a>
             </div>
             <div class="hidden-content">
-              <p>tadafuq email</p>
+              <p>Term email</p>
 
             </div>
           </li>
@@ -140,7 +140,7 @@
             <div class="trigger"><a><img src="{{asset("assets/imgs/location.png")}}" /></a>
             </div>
             <div class="hidden-content">
-              <p>tadafuq location</p>
+              <p>Term location</p>
             </div>
           </li>
           <li>
@@ -177,7 +177,7 @@
       <a href="{{route('web.terms')}}">Terms and Conditions</a>
     </div>
     <div class="copy">
-      <p>© Copyright 2023 Tadafuq. All rights reserved.</p>
+      <p>© Copyright 2023 Term. All rights reserved.</p>
     </div>
   </div>
   </div>
