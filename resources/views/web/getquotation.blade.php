@@ -134,6 +134,37 @@
              font-size: 35px;
             }
     }
+
+
+    .toast {
+  color: #000;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  padding: 1.25em;
+  position: absolute;
+  right: -365px;
+  top: 1em;
+  transition: 0.15s ease-in-out;
+  width: 325px;
+}
+
+.toast.on {
+  transform: translateX(-365px);
+}
+
+.close {
+  cursor: pointer;
+  float: right;
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-left: 1em;
+  opacity: .8;
+}
+
+.jam {
+  background-color: red;
+  color: #fff;
+}
 </style>
 
 </head>
@@ -164,9 +195,9 @@
         </div>
 
         <div class="guo-main-content">
-        <h2 class="hh">Search</h2>
+         <h2 class="hh">Search</h2>
 
-        <div class="selects">
+          <div class="selects">
             <form method="post" action="{{route('web.quotation.store')}}">
                 @csrf
                 <ul class="stepper parallel horizontal">
@@ -884,16 +915,19 @@
 
                 </ul>
             </form>
-        </div>
-        
-    </div> 
+          </div>
+          <div class="toast jam" aria-hidden="true">
+           <span class="close" aria-role="button" tabindex="0">&times;</span>
+             Lightly toasted with jam.
+           </div>
+        </div> 
     </div>
-    </div>
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script type="text/javascript">
        $(document).ready(function () {
-        
+
 });
     </script>
     
@@ -1215,6 +1249,17 @@
         document.addEventListener("click", closeAllSelect);
 
         
+    </script>
+    <script>
+     $(function () {
+         $(document).ready(function () {
+         $('.toast').addClass('on');
+     });
+
+     $('.close').click(function() {
+     $('.toast').removeClass('on');
+     });
+     });
     </script>
  
 </body>
