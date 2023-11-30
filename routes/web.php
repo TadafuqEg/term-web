@@ -6,6 +6,7 @@ use App\Http\Controllers\Dashboard\ContactUsController;
 use App\Http\Controllers\Dashboard\QuotationController as QuotationDashboard;
 use App\Http\Controllers\Dashboard\QuotationFromController as QuotationFormDashboard;
 use App\Http\Controllers\QuotationController as QuotationWeb;
+use App\Http\Controllers\QuotationFormController as QuotationFromWeb;
 
 use App\Http\Controllers\ContactUsController as ContactUs;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -29,7 +30,7 @@ Route::get('/dashboard/contact-us/list',[ContactUsController::class,'index'])->n
 Route::get('/dashboard/quotations/modify',[QuotationDashboard::class,'modify'])->name('dashboard.quotation.modify');
 Route::get('/dashboard/quotations-forms/list',[QuotationFormDashboard::class,'list'])->name('dashboard.quotation-form.index');
 
-
+Route::post('quotation-form/store',[QuotationFromWeb::class,'store'])->name('web.quotation.store');
 
 Route::view('/','web.index')->name('web.index');
 Route::view('/homepage','web.homepage')->name('web.homepage');
@@ -56,198 +57,18 @@ Route::view('/privacy','web.privacy')->name('web.privacy');
 // {{route('web.')}}
 
 Route::get('test-pdff',function(){
+    $quotations = App\Models\QuotationTitle::with('list')->get();
+    $quotationForm = App\Models\QuotationForm::with('from_details')->latest()->first();
     $data = [
-        'foo' => 'bar'
+        'quotations' => $quotations,
+        'quotationForm' => $quotationForm,
+        'quotationSelectList' =>  $quotationForm->from_details->pluck('quotation_list_id')->toArray()
     ];
 
+    // dd($data['quotationForm']['from_details']->where('quotation_list_id',1)->first()->value);
     
-    $pdf = Pdf::loadView('pdf.test', $data);
+    $pdf = Pdf::loadView('pdf.quotations', $data);
     return $pdf->download('invoice.pdf');
 
 });
 
-Route::get('test-est',function(){
-    $data = [
-        'Keywords' => [
-            [
-                'type' => 'normal',
-                'name' => 'restructioning/ Engineering Keyword',
-            ],
-            [
-                'type' => 'normal',
-                'name' => '1-5',
-            ],
-            [
-                'type' => 'normal',
-                'name' => '6-10',
-            ],
-            [
-                'type' => 'normal',
-                'name' => '10+',
-            ],
-        ],
-        'Duration' => [
-            [
-                'type' => 'normal',
-                'name' => '1 day',
-            ],
-            [
-                'type' => 'normal',
-                'name' => '1 week',
-            ],
-            [
-                'type' => 'normal',
-                'name' => '1 month',
-            ],
-            [
-                'type' => 'normal',
-                'name' => '3 months',
-            ],
-            [
-                'type' => 'normal',
-                'name' => '6 months',
-            ],
-            [
-                'type' => 'normal',
-                'name' => '1 year',
-            ],
-            [
-                'type' => 'years',
-                'name' => 'more than year',
-            ],
-            
-        ],
-        'Geolocation' => [
-            [
-                'type' => 'country',
-                'name' => 'Country'
-            ],
-            [
-                'type' => 'normal',
-                'name' => 'Region'
-            ],
-            [
-                'type' => 'normal',
-                'name' => 'WorldWide'
-            ],
-
-        ],
-        'Sources' => [
-            [
-                'type' => 'dropdown_menu',
-                'name' => 'Social Media',
-            ],
-            [
-                'type' => 'normal',
-                'name' => 'WEB',
-            ],
-            [
-                'type' => 'normal',
-                'name' => 'Specific Sources',
-            ],
-        ],
-        'Languages' => [
-            [
-                'type' => 'dropdown_menu',
-                'name' => 'Languages',
-            ],
-            
-        ],
-        'Type Of Data' => [
-            [
-                'type' => 'text',
-                'name' => 'Brand speaking',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Brand speaking + comment',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Brand & Web speaking',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Web speaking + Comments',
-            ],
-        ],
-        'Analysis +' => [
-            [
-                'type' => 'text',
-                'name' => 'Sentiment Analysis',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Semantic Analysis',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Authors / Influence Analysis',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Categorization by themes',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Categorization by types',
-            ],
-        ],
-        'Reports' => [
-            [
-                'type' => 'text',
-                'name' => 'Real time alerts',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Automatic Report',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Personalised Report',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Personalised Comparative report',
-            ],
-            [
-                'type' => 'text',
-                'name' => 'Consulting review',
-            ],
-        ],
-        'Interval / frequency' => [
-            [
-                'type' => 'normal',
-                'name' => 'one shot report',
-            ],
-            [
-                'type' => 'normal',
-                'name' => 'weekly reports',
-            ],
-            [
-                'type' => 'normal',
-                'name' => 'Every tow weeks',
-            ],
-            [
-                'type' => 'normal',
-                'name' => 'Monthly',
-            ],
-            [
-                'type' => 'normal',
-                'name' => 'Quarterly',
-            ],
-        ],
-        'Social Engineering' => [
-            [
-                'type' => 'normal',
-                'name' => 'on demand (please contact us)',
-            ],
-            
-        ],
-    ];
-
-    foreach($data as $key => $item)
-    {
-        dd($key,$item);
-    }
-});

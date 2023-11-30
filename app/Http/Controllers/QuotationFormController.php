@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\QuotationFormRequest;
 use Illuminate\Http\Request;
 use App\Models\QuotationForm;
 use App\Models\QuotationFormDetails;
 
 class QuotationFormController extends Controller
 {
-    public function store(QuotationFormRequest $request)
+    public function store(Request $request)
     {
+
+
         if(is_array($request->quotation_list) && count($request->quotation_list) > 0)
         {
             $quotationForm = QuotationForm::create([
@@ -21,7 +21,7 @@ class QuotationFormController extends Controller
             ]);
             foreach($request->quotation_list as $list)
             {
-                if(isset($list['id']) && $list['id'] != null && $list['id'] != '')
+                if(isset($list['id']) && $list['id'] !=null && $list['id'] != '')
                 {
                     QuotationFormDetails::create([
                         'value' => $list['value']??null,
@@ -32,10 +32,7 @@ class QuotationFormController extends Controller
                 }
             }
         }
-        return response()->json([
-            'status' => true,
-            'message' => 'success'
-        ]);
-        
+        return redirect()->back();
+        dd($quotationForm,QuotationFormDetails::where('quotation_form_id',$quotationForm->id)->get());
     }
 }

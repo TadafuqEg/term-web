@@ -12,6 +12,7 @@ class QuotationController extends Controller
     {
         $quotations = QuotationTitle::with('list')->get();
         $countries = DB::select('SELECT id , name FROM `countries`');
-        return view('web.getquotation',compact('quotations','countries'));
+        $languages = DB::select('SELECT id , name FROM `languages`');
+        return view('web.getquotation',compact('quotations','countries','languages'));
     }
 }
