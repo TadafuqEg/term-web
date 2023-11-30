@@ -66,7 +66,7 @@
             </svg>
         </div>
         <div id="set-height"></div>
-        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="none" src="{{asset('assets\imgs\term_vid32.webm')}}" type="video/mp4" autoplay
+        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="auto" src="https://static.term.ae/assets/imgs/term_vid32.webm" type="video/mp4" autoplay
             muted>
         </video>
 
@@ -182,6 +182,35 @@
             home.classList.add("blok")
         }
        
+    </script>
+     <script defer>
+        function changeVideoSource() {
+            const tabletMediaQuery = window.matchMedia('(max-width: 900px)'); // Adjust the breakpoint for tablets
+
+            if (tabletMediaQuery.matches) {
+                // Tablet screen size, change the video source
+                document.getElementById('v0').src = './assets/imgs/Tablet.mp4'; // Replace with tablet video source
+            } 
+            // Reload the video
+            const video = document.getElementById('v0');
+            video.load();
+        }
+        function changeVideoSource2() {
+            const tabletMediaQuery = window.matchMedia('(max-width:767px)'); // Adjust the breakpoint for tablets
+
+            if (tabletMediaQuery.matches) {
+                // Tablet screen size, change the video source
+                document.getElementById('v0').src = './assets/imgs/Mobile Ren 1.mp4'; // Replace with tablet video source
+            } 
+            // Reload the video
+            const video = document.getElementById('v0');
+            video.load();
+        }
+
+        // Call the function initially and listen for resize events
+        changeVideoSource();
+
+        window.addEventListener('resize', changeVideoSource2);
     </script>
 </body>
 </html>

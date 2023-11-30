@@ -70,6 +70,18 @@
     position: absolute;
     bottom: -140px !important;
 }
+ul.stepper.horizontal .step-actions {
+    position: absolute;
+    bottom: 0;
+    left:50% !important;
+    width: 50% !important;
+    padding: 20px;
+    background-color: transparent;
+    -ms-flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+}
          @media (max-width: 900px){
            .nav>.nav-btn {
               display: inline-block;
