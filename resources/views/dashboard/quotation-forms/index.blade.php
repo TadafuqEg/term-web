@@ -64,7 +64,7 @@ Quotation Forms
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="d-flex justify-content-start flex-column">
-                                    <div class="text-dark fw-bold text-hover-primary fs-6"><a class="btn btn-sm btn-danger">Export PDF</a></div>
+                                    <div class="text-dark fw-bold text-hover-primary fs-6"><a href="{{route('dashboard.quotation-form.export.pdf',$quotationForm->id)}}" class="btn btn-sm btn-danger">Export PDF</a></div>
                                 </div>
                             </div>
                         </td>
