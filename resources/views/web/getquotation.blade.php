@@ -248,10 +248,11 @@
                                                     </select>
                                                     </div>
                                                     @endif
-                                                    @if($list['type']  == 'region')
+       
                                                     <div class="custom-select"  style="width:200px;" >
                                                         <select name="quotation_list[{{$list['id']}}][value]" id="mySelect2" class="selectRegion">
                                                             <option>option1</option>
+
                                                         </select>
                                                        
                                                     </div>
@@ -293,7 +294,7 @@
                                                     @endif
                                                     @if($list['type']  == 'country')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select name="quotation_list[{{$list['id']}}][value]">
+                                                        <select name="quotation_list[{{$list['id']}}][value]" class="selectCountryy">
                                                             @foreach($countries as $country)
                                                                 <option value="{{$country->id}}">{{$country->name}}</option>
                                                             @endforeach
@@ -301,8 +302,13 @@
                                                     </div>
                                                     @endif
                                                     @if($list['type']  == 'region')
+
+                                                    <div class="custom-select" style="width:200px;" >
+                                                        <select name="quotation_list[{{$list['id']}}][value]" class="selectRegion">
+
                                                     <div class="custom-select" id="" style="width:200px;" class="selectRegion">
                                                         <select name="quotation_list[{{$list['id']}}][value]">
+
                                                             
                                                         </select>
                                                     </div>
@@ -389,10 +395,12 @@
                 </ul>
             </form>
           </div>
-          <div class="toast jam" aria-hidden="true">
-           <span class="close" aria-role="button" tabindex="0">&times;</span>
-             Lightly toasted with jam.
-           </div>
+            @if(session()->has('error'))
+                <div class="toast jam" aria-hidden="true">
+                 <span class="close" aria-role="button" tabindex="0">&times;</span>
+                    {{ session()->get('error') }}
+                 </div>
+            @endif
         </div> 
     </div>
   
