@@ -23,6 +23,6 @@ class ContactUsController extends Controller
         $contactUs->company = $request->company;
         $contactUs->message = $request->message;
         $contactUs->save();
-        return redirect()->back();
+        return redirect()->route('web.thanks');
     }
 }
