@@ -32,7 +32,7 @@ class QuotationFormController extends Controller
                 }
             }
         }
-        return redirect()->back();
+        return redirect()->route('web.thanks');
         dd($quotationForm,QuotationFormDetails::where('quotation_form_id',$quotationForm->id)->get());
     }
 }

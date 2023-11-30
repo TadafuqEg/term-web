@@ -29,6 +29,7 @@ Route::view('/dashboard/login','dashboard.login')->name('dashboard.login-form');
 Route::post('/dashboard/login',[AuthController::class,'login'])->name('dashboard.login');
 Route::get('/dashboard/contact-us/list',[ContactUsController::class,'index'])->name('dashboard.contact-us.index');
 Route::get('/dashboard/quotations/modify',[QuotationDashboard::class,'modify'])->name('dashboard.quotation.modify');
+Route::get('/dashboard/quotations/index',[QuotationDashboard::class,'index'])->name('dashboard.quotation.index');
 Route::get('/dashboard/quotations-forms/list',[QuotationFormDashboard::class,'list'])->name('dashboard.quotation-form.index');
 Route::get('/dashboard/quotations-forms/export-pdf/{formId}',[QuotationFormDashboard::class,'exportPDF'])->name('dashboard.quotation-form.export.pdf');
 
