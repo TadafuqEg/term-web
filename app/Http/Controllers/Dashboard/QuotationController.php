@@ -14,4 +14,10 @@ class QuotationController extends Controller
         $quotations  = QuotationTitle::with('list')->get();
         return view('dashboard.quotations.modify',compact('quotations'));
     }
+
+    public function index()
+    {
+        $quotations  = QuotationTitle::with('list')->get();
+        return view('dashboard.quotations.index',compact('quotations'));
+    }
 }
