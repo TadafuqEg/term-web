@@ -10,67 +10,67 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/materialize-stepper@2.1.4/materialize-stepper.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
     <!-- Materializecss compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script> -->
     <!-- jQueryValidation Plugin -->
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <title>term</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}">
-    <style> 
-     #wrapper {
-  text-align: center;
-}
-#selectCountry{
-  padding:10px 0 !important;
-  background:red;
-  color:#fff;
-  margin-left:20% !important;
-}
-.all-flex{
-    display:flex;
-    width:50%;
-    justify-content:start;
-    gap:50px;
-}
-.select-selected:after {
-    position: absolute;
-    content: "";
-    top: 19px;
-}
-.fflex{
-  display:flex;
-  align-items:center !important;
-}
-.fflex .input2-plus{
-  width:400px !important;
-  margin-left:30px;
-  border:1px solid #000 !important;
-  text-align:center;
-  color:#000;
-
-}
-.f-flex{
-    display:flex;
-}
-.f-flex input{
-    width:50%;
-    margin-top:-30px;
-    margin-left:20px;
-}
-.f-flex label{
-    border:0;
-}
-.step2{
-    position: absolute;
-    bottom: -80px !important;
-}
-.step3{
-    position: absolute;
-    bottom: -140px !important;
-}
-ul.stepper.horizontal .step-actions {
+<style> 
+      #wrapper {
+      text-align: center;
+      }
+      #selectCountry{
+        padding:10px 0 !important;
+        background:red;
+        color:#fff;
+        margin-left:20% !important;
+      }
+      .all-flex{
+        display:flex;
+        width:50%;
+        justify-content:start;
+        gap:50px;
+      }
+      .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 19px;
+      }
+     .fflex{
+       display:flex;
+       align-items:center !important;
+     }
+     .fflex .input2-plus{
+      width:400px !important;
+      margin-left:30px;
+      border:1px solid #000 !important;
+      text-align:center;
+      color:#000;
+     }
+     .f-flex{
+      display:flex;
+     }
+     .f-flex input{
+       width:50%;
+       margin-top:-30px;
+       margin-left:20px;
+     }
+    .f-flex label{
+      border:0;
+    }
+    .step2{
+      position: absolute;
+      bottom: -80px !important;
+    }
+    .step3{
+     position: absolute;
+     bottom: -140px !important;
+    }
+    ul.stepper.horizontal .step-actions {
     position: absolute;
     bottom: 0;
     left:50% !important;
@@ -81,8 +81,8 @@ ul.stepper.horizontal .step-actions {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     flex-direction: row-reverse;
-}
-         @media (max-width: 900px){
+    }
+    @media (max-width: 900px){
            .nav>.nav-btn {
               display: inline-block;
               position: absolute;
@@ -133,14 +133,9 @@ ul.stepper.horizontal .step-actions {
             .keywords {
              font-size: 35px;
             }
-         }
-         @media(max-width:767px){
-            
-            
-            
-         }
-        
-    </style>
+    }
+</style>
+
 </head>
 
 <body>
@@ -895,17 +890,18 @@ ul.stepper.horizontal .step-actions {
     </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
 
+    <script type="text/javascript">
+       $(document).ready(function () {
         
-    var select = document.getElementById("selectCountry");
+});
+    </script>
     
-    var countries = new Array("Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burma", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic", "Congo, Republic of the", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Greenland", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Mongolia", "Morocco", "Monaco", "Mozambique", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Samoa", "San Marino", " Sao Tome", "Saudi Arabia", "Senegal", "Serbia and Montenegro", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe");
-        
-    //console.log(countries);
-    //console.log(select);
-        
-    for (var i = 0; i < countries.length; i++) {
+    <script> 
+      var select = document.getElementById("selectCountry");
+      var countries = new Array("Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burma", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic", "Congo, Republic of the", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Greenland", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Mongolia", "Morocco", "Monaco", "Mozambique", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Samoa", "San Marino", " Sao Tome", "Saudi Arabia", "Senegal", "Serbia and Montenegro", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe");    
+    
+      for (var i = 0; i < countries.length; i++) {
         
         var option = document.createElement("option"); 
       //for every turn of the loop create an option tag
@@ -918,22 +914,21 @@ ul.stepper.horizontal .step-actions {
         //console.log(option);
         option.setAttribute("value",countries[i]); //for every turn of the loop set the value attribute to corresponding country name
         //console.log(option);
-        select.insertBefore(option,select.lastChild);
+        // select.insertBefore(option,select.lastChild);
         //console.log(select);
         
-    }
+      }
     
-    document.addEventListener ('DOMContentLoaded', function() {
+      document.addEventListener ('DOMContentLoaded', function() {
         //console.log('DOM fully loaded and parsed');
-        document.querySelector('select[name="selectCountry"]').onchange = alertCountry;
+        document.querySelector('select[name="selectCountry"]')
          }, false);
         
-    function alertCountry(event) {
+      function alertCountry(event) {
         //console.log('DOM loaded');
         //use "this" to refer to selected element
         if(!event.target.value) alert('Please select a country');
-        else alert('You chose ' + event.target.value + '. Yay, grab a beer!');
-    }
+      }
     
     </script>
     
