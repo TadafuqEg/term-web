@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}" />
+    <link rel="preload" as="video" href="https://static.term.ae/assets/imgs/term_vid32.webm">
+    <link rel="prefetch" as="video" href="https://static.term.ae/">
     <style>
         #set-height {
             display: block;
