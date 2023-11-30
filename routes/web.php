@@ -56,7 +56,7 @@ Route::view('/user','web.user')->name('web.user');
 Route::view('/visual','web.visual')->name('web.visual');
 Route::view('/visualize','web.visualize')->name('web.visualize');
 Route::view('/terms','web.terms')->name('web.terms');
-Route::view('/thanks','web.thanks')->name('web.thanks');
+Route::view('/thanks','web.Thanks')->name('web.thanks');
 Route::view('/privacy','web.privacy')->name('web.privacy');
 // {{route('web.')}}
 
