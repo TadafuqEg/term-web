@@ -76,7 +76,7 @@ Route::get('test-pdff',function(){
 
 });
 
-Route::get('cities/{countryId}',function($countryId){
+Route::get('cities-select-options/{countryId}',function($countryId){
     $cities = DB::select('SELECT  id , name FROM `cities` where country_id=\''.$countryId.'\' ');
-    return view('web.ajax.city-option');
-});
+    return view('web.ajax.city-option',compact('cities'));
+})->name('city-select-option');

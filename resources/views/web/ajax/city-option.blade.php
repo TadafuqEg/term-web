@@ -1,3 +1,3 @@
 @foreach($cities as $city)
-<option value="{{$city->id}}">{{$city->name}}</option>
+<option value="{{$city->name}}">{{$city->name}}</option>
 @endforeach

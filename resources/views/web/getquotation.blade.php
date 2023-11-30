@@ -20,6 +20,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
     <title>term</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}">
+    <style>
+
+        .select2-selection ,.select2-container{
+            min-width: 250px !important;
+        }
+    </style>
 <style> 
       #wrapper {
       text-align: center;
@@ -222,7 +228,7 @@
                                                     </p>
                                                     @if($list['type']  == 'dropdown_menu')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select name="quotation_list[{{$list['id']}}][value]">
+                                                        <select name="quotation_list[{{$list['id']}}][value]" class="select2" >
                                                             @if($list['title'] == 'Languages')
                                                             @foreach($languages as $language)
                                                                 <option value="{{$language->name}}">{{$language->name}}</option>
@@ -240,18 +246,17 @@
                                                     @endif
                                                     @if($list['type']  == 'country')
                                                     <div class="custom-select" style="width:200px;">
-                                                    <select id="mySelect" style="width: 200px;">
+                                                        <select class="select2 selectCountry" name="quotation_list[{{$list['id']}}][value]" style="width: 200px;">
                                                             @foreach($countries as $country)
-                                                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                                                <option data-id="{{$country->id}}" value="{{$country->name}}">{{$country->name}}</option>
                                                             @endforeach
-                                                       <!-- Add more options as needed -->
-                                                    </select>
+                                                        <!-- Add more options as needed -->
+                                                        </select>
                                                     </div>
                                                     @endif
-       
+                                                    @if($list['type']  == 'region')
                                                     <div class="custom-select"  style="width:200px;" >
-                                                        <select name="quotation_list[{{$list['id']}}][value]" id="mySelect2" class="selectRegion">
-                                                            <option>option1</option>
+                                                        <select name="quotation_list[{{$list['id']}}][value]" id="mySelect2" class="selectRegion select2">
 
                                                         </select>
                                                        
@@ -259,7 +264,7 @@
                                                     @endif
                                                     @if($list['type']  == 'years')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select name="quotation_list[{{$list['id']}}][value]">
+                                                        <select name="quotation_list[{{$list['id']}}][value]" class="select2">
                                                             @for($i=1;$i<=10;$i++)
                                                                 <option value="{{$i}}">{{$i}}</option>
                                                             @endfor
@@ -271,6 +276,7 @@
                                                             <input class="input2-plus" for="brand" placeholder="{{$list['title']}}" name="quotation_list[{{$list['id']}}][value]" />
                                                         </div>
                                                     @endif
+                                                </div>
                                                 @endif
                                             @endforeach
                                         </div>
@@ -284,7 +290,7 @@
                                                     </p>
                                                     @if($list['type']  == 'dropdown_menu')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select name="quotation_list[{{$list['id']}}][value]">
+                                                        <select name="quotation_list[{{$list['id']}}][value]" class="select2" >
                                                             <option value="Facebook">Facebook</option>
                                                             <option value="instgram">instgram</option>
                                                             <option value="Tik Tok">Tik Tok</option>
@@ -294,20 +300,17 @@
                                                     @endif
                                                     @if($list['type']  == 'country')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select name="quotation_list[{{$list['id']}}][value]" class="selectCountryy">
+                                                        <select name="quotation_list[{{$list['id']}}][value]" class="selectCountry select2" >
                                                             @foreach($countries as $country)
-                                                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                                                <option data-id="{{$country->id}}" value="{{$country->name}}">{{$country->name}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
                                                     @endif
                                                     @if($list['type']  == 'region')
 
-                                                    <div class="custom-select" style="width:200px;" >
-                                                        <select name="quotation_list[{{$list['id']}}][value]" class="selectRegion">
-
-                                                    <div class="custom-select" id="" style="width:200px;" class="selectRegion">
-                                                        <select name="quotation_list[{{$list['id']}}][value]">
+                                                    <div class="custom-select" id="" style="width:200px;" class="">
+                                                        <select name="quotation_list[{{$list['id']}}][value]" class="selectRegion select2" >
 
                                                             
                                                         </select>
@@ -315,7 +318,7 @@
                                                     @endif
                                                     @if($list['type']  == 'years')
                                                     <div class="custom-select" style="width:200px;">
-                                                        <select name="quotation_list[{{$list['id']}}][value]">
+                                                        <select name="quotation_list[{{$list['id']}}][value]" class="select2" >
                                                             @for($i=1;$i<=10;$i++)
                                                                 <option value="{{$i}}">{{$i}}</option>
                                                             @endfor
@@ -433,7 +436,7 @@
 </script>
     <script>
       $(document).ready(function() {
-         $('#mySelect').select2();
+         $('.select2').select2();
       });
     </script>
     <script>
@@ -445,6 +448,14 @@
     <script>
         $(document).ready(function () {
             $('.stepper').activateStepper();
+            $('.selectCountry').on('change',function(){
+                let id = $(this).find(":selected").data('id');
+                $.ajax({url: `/cities-select-options/${id}`, success: function(result){
+                    $(`.selectRegion`).html(result)
+                    $(`.selectRegion`).trigger("change");
+                }});
+                
+            });
         })
 
         function validateStepOne() {
