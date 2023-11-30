@@ -26,7 +26,7 @@
 					<!--begin::Brand-->
 					<div class="aside-logo flex-column-auto px-9 mb-9" id="kt_aside_logo">
 						<!--begin::Logo-->
-						<a href="../../demo3/dist/index.html">
+						<a href="#">
 							<img alt="Logo" src="{{asset("assets\imgs\logo.png")}}" class="logo theme-light-show" style="height: 60px!important" />
 							<img alt="Logo" src="{{asset("assets\imgs\logo.png")}}" class="logo theme-dark-show" style="height: 60px!important" />
 						</a>

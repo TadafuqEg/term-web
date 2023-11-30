@@ -11,11 +11,19 @@ class QuotationFromController extends Controller
 {
     public function list()
     {
+        if(auth()->check() == false)
+        {
+            return redirect()->route('dashboard.login-form');
+        }
         $quotationForms = QuotationForm::with('from_details')->paginate(12);
         return view('dashboard.quotation-forms.index',compact('quotationForms'));
     }
 
     public function exportPDF($formId){
+        if(auth()->check() == false)
+        {
+            return redirect()->route('dashboard.login-form');
+        }
         $quotations = QuotationTitle::with('list')->get();
         $quotationForm = QuotationForm::with('from_details')->find($formId);
         $data = [

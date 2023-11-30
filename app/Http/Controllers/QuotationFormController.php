@@ -14,6 +14,10 @@ class QuotationFormController extends Controller
 
         if(is_array($request->quotation_list) && count($request->quotation_list) > 0)
         {
+            $checkQuotationForm = QuotationForm::where('email',$request->email)->where('created_at','>=',now()->format('Y-m-d').' 00:00:00')->where('created_at','<=',now()->format('Y-m-d').' 23:59:59')->count();
+            if($checkQuotationForm > 0){
+                return redirect()->back()->with('error', 'A request is allowed under procedure and another is not allowed until after 24 hours have passed');
+            }
             $quotationForm = QuotationForm::create([
                 'email' => $request->email,
                 'name' => $request->name,
@@ -33,6 +37,6 @@ class QuotationFormController extends Controller
             }
         }
         return redirect()->route('web.thanks');
-        dd($quotationForm,QuotationFormDetails::where('quotation_form_id',$quotationForm->id)->get());
+        
     }
 }
