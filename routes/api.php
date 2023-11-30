@@ -22,13 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('quotations',function(){
-    $quotations  = QuotationTitle::with('list')->get()->map(function($row){
-        $row->list = $row->list->map(function($list){
-            $list->type = (string)$list->type;
-            return $list;
-        });
-        return $row;
-    });
+    $quotations  = QuotationTitle::with('list')->get();
     return response()->json([
         'data' => $quotations
     ], 200);
