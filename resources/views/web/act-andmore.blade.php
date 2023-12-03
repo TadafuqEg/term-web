@@ -3,7 +3,10 @@
 term-act-and-more
 @endpush
 @push('act-page-background')
-act-and-more
+act-and-more " Hna anta hatfyf l class l gdyd "
+@endpush
+@push('act-page-data-source')
+hna anta hatdyf l data source l value bas
 @endpush
 @section('content')
 <div class="frame-main">

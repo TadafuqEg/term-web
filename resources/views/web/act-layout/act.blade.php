@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="page @stack('act-page-background') lazy-background">
+    <div class="page @stack('act-page-background') lazy-background" data-src="@stack('act-page-data-source')">
         <!-- nav -->
         <div class="nav">
             <input type="checkbox" id="nav-check">
