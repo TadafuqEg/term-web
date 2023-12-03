@@ -309,7 +309,7 @@
                                                     @endif
                                                     @if($list['type']  == 'region')
 
-                                                    <div class="custom-select" id="" style="width:200px;" class="">
+                                                    <div class="custom-select" id="" style="width:200px;">
                                                         <select name="quotation_list[{{$list['id']}}][value]" class="selectRegion select2" >
 
                                                             
