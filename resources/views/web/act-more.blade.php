@@ -3,7 +3,10 @@
 term-act-more
 @endpush
 @push('act-page-background')
-act-more
+act-more lazy-background
+@endpush
+@push('act-page-data-source')
+{{asset("assets/imgs/img10.jpg")}}
 @endpush
 @section('content')
 <div class="frame-main">

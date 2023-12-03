@@ -3,7 +3,10 @@
 term-visualize
 @endpush
 @push('act-page-background')
-visualize
+visualize lazy-background
+@endpush
+@push('act-page-data-source')
+{{asset("assets/imgs/img2.jpg")}}
 @endpush
 @section('content')
 <div class="frame-main">

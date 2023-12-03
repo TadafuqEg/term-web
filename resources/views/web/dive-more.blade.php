@@ -3,7 +3,10 @@
 term-dive-more
 @endpush
 @push('act-page-background')
-dive-more
+dive-more lazy-background
+@endpush
+@push('act-page-data-source')
+{{asset("assets/imgs/img5.jpg")}}
 @endpush
 @section('content')
 <div class="frame-main">

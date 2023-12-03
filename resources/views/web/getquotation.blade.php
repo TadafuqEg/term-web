@@ -134,8 +134,24 @@
             .keywords {
              font-size: 35px;
             }
+            ul.stepper.horizontal .step-actions {
+             position: absolute;
+             top:70%;
+             left: 40% !important;
+            }
+            ul.stepper.horizontal .step-content {
+                overflow:auto: !important;
+             }
     }
-
+    @media (max-width:767px){
+        ul.stepper.horizontal .step-actions {
+        position: absolute;
+        bottom: 0;
+        left: 0% !important;
+        width: 100% !important;
+        padding: 20px;
+    }
+    }
 
     .toast {
   color: #000;
@@ -166,12 +182,15 @@
   background-color: red;
   color: #fff;
  }
+ .getqu .nav .active{
+    height:auto !important;
+ }
 </style>
 
 </head>
 
 <body>
-    <div class="">
+    <div class="getqu">
 
         <div class="nav">
             <input type="checkbox" id="nav-check">

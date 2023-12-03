@@ -43,7 +43,7 @@
     </div>
 </body>
 <!--lazy-load -->
-<script defer>
+   <script defer>
         document.addEventListener("DOMContentLoaded", function() {
         let lazyBackgrounds = document.querySelectorAll('.lazy-background');
 

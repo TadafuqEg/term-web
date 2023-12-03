@@ -3,7 +3,10 @@
 term-user
 @endpush
 @push('act-page-background')
-user
+user lazy-background
+@endpush
+@push('act-page-data-source')
+{{asset("assets/imgs/img14.png")}}
 @endpush
 @section('content')
 <div class="frame-main">

@@ -3,7 +3,10 @@
 term-visual
 @endpush
 @push('act-page-background')
-Visual
+Visual lazy-background
+@endpush
+@push('act-page-data-source')
+{{asset("assets/imgs/img13.png")}}
 @endpush
 @section('content')
 <div class="frame-main">

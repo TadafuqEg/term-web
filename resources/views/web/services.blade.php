@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="about">
+    <div class="about services">
 
         <div class="nav">
             <input type="checkbox" id="nav-check">
