@@ -1,6 +1,6 @@
 @extends('web.act-layout.act')
 @push('act-page-title')
-term-framework
+term-learn
 @endpush
 @push('act-page-background')
 learn

@@ -1,6 +1,6 @@
 @extends('web.act-layout.act')
 @push('act-page-title')
-term-framework
+term-service
 @endpush
 @push('act-page-background')
 service

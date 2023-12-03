@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Term</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}" />
+    <link rel="icon" href="{{asset("assets/imgs/TERM fav.png")}}" type="image/x-icon">
     <link rel="preload" as="video" href="https://static.term.ae/assets/imgs/term_vid32.webm">
     <link rel="prefetch" as="video" href="https://static.term.ae/">
     <style>
@@ -72,7 +73,7 @@
         </video>
 
         <div class="homepage home" id="home">
-            <div class="home-back">
+            <div class="home-back lazy-background" data-src="{{asset("assets/imgs/img20.jpg")}}">
                 <div class="nav">
                     <input type="checkbox" id="nav-check">
                     <div class="nav-header">
@@ -212,6 +213,33 @@
             home.classList.add("blok")
         }
        
+    </script>
+
+    <!--lazy-load -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+        let lazyBackgrounds = document.querySelectorAll('.lazy-background');
+
+        if ('IntersectionObserver' in window) {
+        let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyBackground = entry.target;
+                    lazyBackground.style.backgroundImage = `url(${lazyBackground.getAttribute('data-src')})`;
+                    lazyBackgroundObserver.unobserve(lazyBackground);
+                }
+            });
+        });
+
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackgroundObserver.observe(lazyBackground);
+        });
+        } else {
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackground.style.backgroundImage = `url(${lazyBackground.getAttribute('data-src')})`;
+        });
+        }
+        });
     </script>
      
 </body>
