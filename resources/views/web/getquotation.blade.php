@@ -229,6 +229,7 @@
                                                     @if($list['type']  == 'dropdown_menu')
                                                     <div class="custom-select" style="width:200px;">
                                                         <select name="quotation_list[{{$list['id']}}][value]" class="select2" >
+                                                            <option value="">Select language</option>
                                                             @if($list['title'] == 'Languages')
                                                             @foreach($languages as $language)
                                                                 <option value="{{$language->name}}">{{$language->name}}</option>
@@ -239,6 +240,7 @@
                                                                 <option value="Facebook">Facebook</option>
                                                                 <option value="instgram">instgram</option>
                                                                 <option value="Tik Tok">Tik Tok</option>
+                                                                <option value="Snapchat">Snapchat</option>
                                                                 <option value="X">X</option>
                                                             @endif
                                                         </select>
@@ -257,7 +259,7 @@
                                                     @if($list['type']  == 'region')
                                                     <div class="custom-select"  style="width:200px;" >
                                                         <select name="quotation_list[{{$list['id']}}][value]" id="mySelect2" class="selectRegion select2">
-
+                                                            <option value="">Select region</option>
                                                         </select>
                                                        
                                                     </div>
@@ -265,6 +267,7 @@
                                                     @if($list['type']  == 'years')
                                                     <div class="custom-select" style="width:200px;">
                                                         <select name="quotation_list[{{$list['id']}}][value]" class="select2">
+                                                            <option value="">Select years</option>
                                                             @for($i=1;$i<=10;$i++)
                                                                 <option value="{{$i}}">{{$i}}</option>
                                                             @endfor
@@ -291,6 +294,7 @@
                                                     @if($list['type']  == 'dropdown_menu')
                                                     <div class="custom-select" style="width:200px;">
                                                         <select name="quotation_list[{{$list['id']}}][value]" class="select2" >
+                                                            <option value="">Select {{$list['title']}}</option>
                                                             <option value="Facebook">Facebook</option>
                                                             <option value="instgram">instgram</option>
                                                             <option value="Tik Tok">Tik Tok</option>
@@ -301,6 +305,7 @@
                                                     @if($list['type']  == 'country')
                                                     <div class="custom-select" style="width:200px;">
                                                         <select name="quotation_list[{{$list['id']}}][value]" class="selectCountry select2" >
+                                                            <option value="">Select country</option>
                                                             @foreach($countries as $country)
                                                                 <option data-id="{{$country->id}}" value="{{$country->name}}">{{$country->name}}</option>
                                                             @endforeach
@@ -311,7 +316,7 @@
 
                                                     <div class="custom-select" id="" style="width:200px;">
                                                         <select name="quotation_list[{{$list['id']}}][value]" class="selectRegion select2" >
-
+                                                            <option value="">Select region</option>
                                                             
                                                         </select>
                                                     </div>
@@ -319,6 +324,7 @@
                                                     @if($list['type']  == 'years')
                                                     <div class="custom-select" style="width:200px;">
                                                         <select name="quotation_list[{{$list['id']}}][value]" class="select2" >
+                                                            <option value="">Select years</option>
                                                             @for($i=1;$i<=10;$i++)
                                                                 <option value="{{$i}}">{{$i}}</option>
                                                             @endfor
