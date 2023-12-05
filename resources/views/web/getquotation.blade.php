@@ -409,7 +409,7 @@
                                     </p>
                                     <p class="f-flex">
                                         <label for="checkbox40">Phone</label>
-                                        <input type="tel" id="phone" class="zip-code" />
+                                        <input type="tel" name="phone" id="phone" class="zip-code" />
                                         <!-- <input type="text" name="phone" placeholder="Your Phone" required />  -->
                                     </p>
                                     
@@ -441,13 +441,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Initialize intlTelInput on the phone input field
-            const input = document.querySelector("#phone");
-            const iti = window.intlTelInput(input, {
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
-            });
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     // Initialize intlTelInput on the phone input field
+        //     const input = document.querySelector("#phone");
+        //     const iti = window.intlTelInput(input, {
+        //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
+        //     });
+        // });
+
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            autoPlaceholder:"polit",
+            formatOnDisplay:true,
+            hiddenInput: "countryCode",
+
+            placeholderNumberType: "MOBILE",
+            preferredCountries: ['ae'],
+            separateDialCode: true,
         });
+        $('form').submit(function(e){
+            e.preventDefault;
+            let phone = $('input[name="phone"]').val()
+            $('input[name="phone"]').val($('.iti__selected-dial-code').text()+phone);
+            console.log($('.iti__selected-dial-code').text());
+        })
     </script>
 
     <script>
