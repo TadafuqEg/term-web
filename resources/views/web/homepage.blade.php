@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="{{asset("assets/imgs/TERM fav.png")}}" type="image/x-icon">
+    <title>term-homepage</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}" />
     <style>
     
@@ -15,7 +16,7 @@
 <body>
     <div class="main1">
         <div class="home">
-            <div class="home-back">
+            <div class="home-back lazy-background" data-src="{{asset("assets/imgs/img20.jpg")}}">
                 <div class="nav">
                     <input type="checkbox" id="nav-check">
                     <div class="nav-header">
@@ -93,6 +94,33 @@
                 $('.slide').last().prependTo('.slider-wrap');
             });
 
+        });
+    </script>
+
+     <!--lazy-load -->
+     <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+        let lazyBackgrounds = document.querySelectorAll('.lazy-background');
+
+        if ('IntersectionObserver' in window) {
+        let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyBackground = entry.target;
+                    lazyBackground.style.backgroundImage = `url(${lazyBackground.getAttribute('data-src')})`;
+                    lazyBackgroundObserver.unobserve(lazyBackground);
+                }
+            });
+        });
+
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackgroundObserver.observe(lazyBackground);
+        });
+        } else {
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackground.style.backgroundImage = `url(${lazyBackground.getAttribute('data-src')})`;
+        });
+        }
         });
     </script>
   

@@ -1,9 +1,12 @@
 @extends('web.act-layout.act')
 @push('act-page-title')
-term-framework
+term-dive
 @endpush
 @push('act-page-background')
-dive
+dive lazy-background
+@endpush
+@push('act-page-data-source')
+{{asset("assets/imgs/img4.jpg")}}
 @endpush
 @section('content')
 <div class="frame-main">

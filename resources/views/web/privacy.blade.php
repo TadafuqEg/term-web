@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>privacy-policy</title>
+    <link rel="icon" href="{{asset("assets/imgs/TERM fav.png")}}" type="image/x-icon">
+    <title>term-privacy-policy</title>
     <link rel="stylesheet" href="{{asset("css/terms.css")}}" />
 </head>
 <body>

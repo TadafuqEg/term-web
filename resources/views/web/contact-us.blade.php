@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{asset("assets/imgs/TERM fav.png")}}" type="image/x-icon">
   <title>term-contacts</title>
   <link rel="stylesheet" href="{{asset("css/style.css")}}" />
   <style>
@@ -19,7 +20,7 @@
     width: 100%;
    }
    .contactus{
-    background-image: url(/assets/imgs/img15.png);
+    /* background-image: url(/assets/imgs/img15.png); */
     width: 100%;
     min-height: 120vh;
     }
@@ -27,7 +28,7 @@
 </head>
 
 <body>
-  <div class="page service per contactus">
+  <div class="page service per contactus lazy-background" data-src="{{asset("assets/imgs/img15.png")}}">
     <div class="nav">
             <input type="checkbox" id="nav-check">
             <div class="nav-header">
@@ -187,7 +188,7 @@
 
 
 
-  <script>
+  <script defer>
     function myFunction() {
       var btn = document.getElementById("btn")
       var element = document.getElementById("nav-ul");
@@ -202,13 +203,38 @@
       })
     }
   </script>
- <script>
+ <script defer>
   var message = document.getElementById("xx")
 	function myFunction() {
 		alert("message send successfuly");
 	}
 </script>
- 
+  <!--lazy-load -->
+  <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+        let lazyBackgrounds = document.querySelectorAll('.lazy-background');
+
+        if ('IntersectionObserver' in window) {
+        let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyBackground = entry.target;
+                    lazyBackground.style.backgroundImage = `url(${lazyBackground.getAttribute('data-src')})`;
+                    lazyBackgroundObserver.unobserve(lazyBackground);
+                }
+            });
+        });
+
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackgroundObserver.observe(lazyBackground);
+        });
+        } else {
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackground.style.backgroundImage = `url(${lazyBackground.getAttribute('data-src')})`;
+        });
+        }
+        });
+    </script>
 </body>
 
 </html>
