@@ -11,7 +11,6 @@ class QuotationFormController extends Controller
     public function store(Request $request)
     {
 
-        dd($request->all());
         if(is_array($request->quotation_list) && count($request->quotation_list) > 0)
         {
             $checkQuotationForm = QuotationForm::where('email',$request->email)->where('created_at','>=',now()->format('Y-m-d').' 00:00:00')->where('created_at','<=',now()->format('Y-m-d').' 23:59:59')->count();
