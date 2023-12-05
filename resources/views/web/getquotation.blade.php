@@ -11,16 +11,14 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/materialize-stepper@2.1.4/materialize-stepper.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
     <link rel="icon" href="{{asset("assets/imgs/TERM fav.png")}}" type="image/x-icon">
     <title>term-getquotation</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}">
-    <style>
-
-        .select2-selection ,.select2-container{
+    <style> 
+     .select2-selection ,.select2-container{
             min-width: 250px !important;
         }
-    </style>
-<style> 
       #wrapper {
       text-align: center;
       }
@@ -60,30 +58,30 @@
        margin-top:-30px;
        margin-left:20px;
      }
-    .f-flex label{
+     .f-flex label{
       border:0;
-    }
-    .step2{
+     }
+     .step2{
       position: absolute;
       bottom: -80px !important;
-    }
-    .step3{
-     position: absolute;
-     bottom: -140px !important;
-    }
-    ul.stepper.horizontal .step-actions {
-    position: absolute;
-    bottom: 0;
-    left:50% !important;
-    width: 50% !important;
-    padding: 20px;
-    background-color: transparent;
-    -ms-flex-direction: row-reverse;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    flex-direction: row-reverse;
-    }
-    @media (max-width: 900px){
+     }
+     .step3{
+      position: absolute;
+      bottom: -140px !important;
+     }
+     ul.stepper.horizontal .step-actions {
+      position: absolute;
+      bottom: 0;
+      left:50% !important;
+      width: 50% !important;
+      padding: 20px;
+      background-color: transparent;
+      -ms-flex-direction: row-reverse;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      flex-direction: row-reverse;
+     }
+     @media (max-width: 900px){
            .nav>.nav-btn {
               display: inline-block;
               position: absolute;
@@ -142,50 +140,61 @@
             ul.stepper.horizontal .step-content {
                 overflow:auto: !important;
              }
-    }
-    @media (max-width:767px){
+     }
+     @media (max-width:767px){
         ul.stepper.horizontal .step-actions {
         position: absolute;
         bottom: 0;
         left: 0% !important;
         width: 100% !important;
         padding: 20px;
-    }
-    }
+     }
+     }
 
-    .toast {
-  color: #000;
-  line-height: 1.5;
-  margin-bottom: 1em;
-  padding: 1.25em;
-  position: absolute;
-  right: -365px;
-  top: 1em;
-  transition: 0.15s ease-in-out;
-  width: 325px;
- }
+     .toast {
+      color: #000;
+      line-height: 1.5;
+      margin-bottom: 1em;
+      padding: 1.25em;
+      position: absolute;
+      right: -365px;
+      top: 1em;
+      transition: 0.15s ease-in-out;
+      width: 325px;
+     }
 
- .toast.on {
-  transform: translateX(-365px);
- }
+     .toast.on {
+      transform: translateX(-365px);
+     }
 
- .close {
-  cursor: pointer;
-  float: right;
-  font-size: 1.25rem;
-  line-height: 1;
-  margin-left: 1em;
-  opacity: .8;
- }
+     .close {
+      cursor: pointer;
+      float: right;
+      font-size: 1.25rem;
+      line-height: 1;
+      margin-left: 1em;
+      opacity: .8;
+     }
 
- .jam {
-  background-color: red;
-  color: #fff;
- }
- .getqu .nav .active{
-    height:auto !important;
- }
-</style>
+     .jam {
+      background-color: red;
+      color: #fff;
+     }
+     .getqu .nav .active{
+      height:auto !important;
+     }
+     .zip-code{
+        width:50%
+     }
+     .iti {
+       position: relative;
+       display: inline-block;
+       width: 92% !important;
+       top: -30px;
+       left: 16px;
+       z-index: 999999;
+     }
+    </style>
 
 </head>
 
@@ -400,7 +409,8 @@
                                     </p>
                                     <p class="f-flex">
                                         <label for="checkbox40">Phone</label>
-                                        <input type="text" name="phone" placeholder="Your Phone" required /> 
+                                        <input type="tel" id="phone" class="zip-code" />
+                                        <!-- <input type="text" name="phone" placeholder="Your Phone" required />  -->
                                     </p>
                                     
                                 </div>
@@ -429,6 +439,17 @@
     
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize intlTelInput on the phone input field
+            const input = document.querySelector("#phone");
+            const iti = window.intlTelInput(input, {
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
+            });
+        });
+    </script>
+
     <script>
       $(document).ready(function() {
          $('.select2').select2();
@@ -662,76 +683,7 @@
         };
     
     </script>
-    <!-- <script>
-        var x, i, j, l, ll, selElmnt, a, b, c;
-        x = document.getElementsByClassName("custom-select");
-        l = x.length;
-        for (i = 0; i < l; i++) {
-            selElmnt = x[i].getElementsByTagName("select")[0];
-            ll = selElmnt.length;
-
-            a = document.createElement("DIV");
-            a.setAttribute("class", "select-selected");
-            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-            x[i].appendChild(a);
-            b = document.createElement("DIV");
-            b.setAttribute("class", "select-items select-hide");
-            for (j = 1; j < ll; j++) {
-                c = document.createElement("DIV");
-                c.innerHTML = selElmnt.options[j].innerHTML;
-                c.addEventListener("click", function (e) {
-                    var y, i, k, s, h, sl, yl;
-                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                    sl = s.length;
-                    h = this.parentNode.previousSibling;
-                    for (i = 0; i < sl; i++) {
-                        if (s.options[i].innerHTML == this.innerHTML) {
-                            s.selectedIndex = i;
-                            h.innerHTML = this.innerHTML;
-                            y = this.parentNode.getElementsByClassName("same-as-selected");
-                            yl = y.length;
-                            for (k = 0; k < yl; k++) {
-                                y[k].removeAttribute("class");
-                            }
-                            this.setAttribute("class", "same-as-selected");
-                            break;
-                        }
-                    }
-                    h.click();
-                });
-                b.appendChild(c);
-            }
-            x[i].appendChild(b);
-            a.addEventListener("click", function (e) {
-                e.stopPropagation();
-                closeAllSelect(this);
-                this.nextSibling.classList.toggle("select-hide");
-                this.classList.toggle("select-arrow-active");
-            });
-        }
-        function closeAllSelect(elmnt) {
-            var x, y, i, xl, yl, arrNo = [];
-            x = document.getElementsByClassName("select-items");
-            y = document.getElementsByClassName("select-selected");
-            xl = x.length;
-            yl = y.length;
-            for (i = 0; i < yl; i++) {
-                if (elmnt == y[i]) {
-                    arrNo.push(i)
-                } else {
-                    y[i].classList.remove("select-arrow-active");
-                }
-            }
-            for (i = 0; i < xl; i++) {
-                if (arrNo.indexOf(i)) {
-                    x[i].classList.add("select-hide");
-                }
-            }
-        }
-        document.addEventListener("click", closeAllSelect);
-
-        
-    </script> -->
+    
     <script>
      $(function () {
          $(document).ready(function () {
