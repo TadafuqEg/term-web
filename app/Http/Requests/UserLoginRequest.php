@@ -25,7 +25,7 @@ class UserLoginRequest extends FormRequest
         return [
             'email' => ['required','email','max:255',Rule::in(User::pluck('email'))],
             'password' => 'required|min:6|max:255',
-            'FCM_token' => 'required'
+            'FCMToken' => 'required'
         ];
     }
 }
