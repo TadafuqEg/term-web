@@ -53,3 +53,4 @@ Route::post('quotation/store',[QuotationFormController::class,'store']);
 
 Route::post('login',[UserController::class,'login']);
 Route::post('register',[UserController::class,'register']);
+Route::post('update-FCM-token',[UserController::class,'updateFCM']);

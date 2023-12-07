@@ -4,15 +4,20 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdateFcmRequest;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
     public function register(UserRegisterRequest $request)
     {
-        $user = User::create($request->validated());
+        $data = $request->validated();
+        $data['password'] = Hash::make($data['password']);
+        unset($data['password_confirmation']);
+        $user = User::create($data);
         $user->access_token = $user->createToken('user')->plainTextToken;
         return response()->json([
             'success' => true,
@@ -23,11 +28,11 @@ class UserController extends Controller
     public function login(UserLoginRequest $request)
     {
         if (auth()->attempt(['email' => $request['email'], 'password' => $request['password'],'type'=>'user'])) {
-            $user =  auth('api')->user();
-            if(isset($data['FCM_token']) && $data['FCM_token'] != null)
+            $user =  auth()->user();
+            if(isset($data['FCMToken']) && $data['FCMToken'] != null)
             {
-                User::find($user->id)->update(['FCM_token',$request['FCM_token']]);
-                $user->FCM_token = $data['FCM_token'];
+                User::find($user->id)->update(['FCMToken',$request['FCMToken']]);
+                $user->FCMToken = $data['FCMToken'];
             }
             $user->access_token = $user->createToken('user')->plainTextToken;
             return response()->json([
@@ -40,6 +45,25 @@ class UserController extends Controller
                 'message' => 'Invalid Credentials.'
              ]);
         }
+    }
+
+    public function updateFCM(UpdateFcmRequest $request)
+    {
+        if(!auth('api')->check())
+        {
+            return response()->json([
+                'success' => false,
+                'message' => 'unauthorized'
+             ],401);
+        }
+        $user = User::find(auth('api')->user()->id);
+        $user->update([
+            'FCMToken' => $request['FCMToken']
+        ]);
+        return response()->json([
+            'success' => true,
+            'data' => $user,
+         ]);
     }
 
 }
