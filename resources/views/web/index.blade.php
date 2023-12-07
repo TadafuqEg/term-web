@@ -6,8 +6,8 @@
     <title>Term</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}" />
     <link rel="icon" href="{{asset("assets/imgs/TERM fav.png")}}" type="image/x-icon">
-    <link rel="preload" as="video" href="https://static.term.ae/assets/imgs/term_vid32.webm">
-    <link rel="prefetch" as="video" href="https://static.term.ae/">
+    <link rel="preload" as="video" href="{{asset('assets/imgs/term_vid32.webm')}}">
+    <link rel="prefetch" as="video" href="https://term.ae/">
     <style>
         #set-height {
             display: block;
@@ -68,7 +68,7 @@
             </svg>
         </div>
         <div id="set-height"></div>
-        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="auto" src="https://static.term.ae/assets/imgs/term_vid32.webm" type="video/mp4" autoplay
+        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="auto" src="{{asset("assets/imgs/term_vid32.webm")}}" type="video/mp4" autoplay
             muted>
         </video>
 
