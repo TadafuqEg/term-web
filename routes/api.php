@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\QuotationTitle;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Api\QuotationFormController;
+use App\Http\Controllers\Api\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -48,3 +49,8 @@ Route::get('cities/{countryId}',function($countryId){
 });
 
 Route::post('quotation/store',[QuotationFormController::class,'store']);
+
+
+Route::post('login',[UserController::class,'login']);
+Route::post('register',[UserController::class,'register']);
+Route::post('update-FCM-token',[UserController::class,'updateFCM']);
