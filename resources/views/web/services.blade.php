@@ -140,13 +140,13 @@
                                                     </div>
                                                     <div class="face4-items">
                                                         <div class="item item1">
-                                                            <a href="../actions/framework/framework.html">Framework</a>
+                                                            <a href="{{route('web.framework')}}">Framework</a>
                                                         </div>
                                                         <div class="item item2">
-                                                            <a href="../actions/learn/learn.html">Learn</a>
+                                                            <a href="{{route('web.learn')}}">Learn</a>
                                                         </div>
                                                         <div class="item item3">
-                                                            <a href="../actions/visualize/visualize.html">Visualize</a>
+                                                            <a href="{{route('web.visualize')}}">Visualize</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -199,7 +199,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        var slideIndex = 3;
+        var slideIndex = 4;
         showDivs(slideIndex);
 
         function plusDivs(n) {
