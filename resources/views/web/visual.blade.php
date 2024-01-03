@@ -11,21 +11,21 @@ Visual lazy-background
 @section('content')
 <div class="frame-main">
     <div class="frame-left">
-        <ul>
-            <li><a href="{{route('web.framework')}}">Framework</a></li>
-            <li><a href="{{route('web.learn')}}">Learn</a></li>
-            <li><a href="{{route('web.visualize')}}">Visualize</a></li>
-            <li><a href="{{route('web.div-act-more')}}">Dive</a></li>
-            <li><a href="{{route('web.dive-more')}}">Dive more</a></li>
-            <li><a href="{{route('web.think')}}">Think</a></li>
-            <li><a href="{{route('web.think-more')}}">Think more</a></li>
-            <li><a href="{{route('web.act')}}">Act</a></li>
-            <li><a href="{{route('web.act-more')}}">Act More</a></li>
-            <li><a href="{{route('web.act-andmore')}}">Act more and more</a></li>
-            <li><a href="{{route('web.service')}}">Service Presentation</a></li>
-            <li class="bigger"><a>Visual Showcase</a></li>
-            <li><a href="{{route('web.user')}}">User Engagement</a></li>
-        </ul>
+        <div class="links">
+            <a href="{{route('web.framework')}}">Framework</a>
+            <a href="{{route('web.learn')}}">Learn</a>
+            <a href="{{route('web.visualize')}}">Visualize</a>
+            <a href="{{route('web.div-act-more')}}">Dive</a>
+            <a href="{{route('web.dive-more')}}">Dive more</a>
+            <a href="{{route('web.think')}}">Think</a>
+            <a href="{{route('web.think-more')}}">Think more</a>
+            <a href="{{route('web.act')}}">Act</a>
+            <a href="{{route('web.act-more')}}">Act More</a>
+            <a href="{{route('web.act-andmore')}}">Act more and more</a>
+            <a href="{{route('web.service')}}">Service Presentation</a>
+            <a class="bigger">Visual Showcase</a>
+            <a href="{{route('web.user')}}">User Engagement</a>
+        </div>
     </div>
     <div class="frame-right">
         <p class="padd-top">Create a visually appealing presentation of the services, including high-quality 

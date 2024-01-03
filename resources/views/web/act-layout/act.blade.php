@@ -45,13 +45,13 @@
 <!--lazy-load -->
    <script defer>
         document.addEventListener("DOMContentLoaded", function() {
-        let lazyBackgrounds = document.querySelectorAll('.lazy-background');
+        var lazyBackgrounds = document.querySelectorAll('.lazy-background');
 
         if ('IntersectionObserver' in window) {
-        let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+        var lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
-                    let lazyBackground = entry.target;
+                    var lazyBackground = entry.target;
                     lazyBackground.style.backgroundImage = `url(${lazyBackground.getAttribute('data-src')})`;
                     lazyBackgroundObserver.unobserve(lazyBackground);
                 }
@@ -68,4 +68,5 @@
         }
         });
     </script>
+    
 </html>
