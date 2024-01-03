@@ -709,6 +709,11 @@ html {
     line-height: 1;
     color: #fff;
 }
+@media(max-width:1450px){
+    #v0{
+        transform: scaleY(1.5);
+    }
+}
 
 @media(max-width:1390px) {
     .circle {
@@ -746,6 +751,7 @@ html {
 @media(max-width:900px) {
     #v0 {
         height: 100vh;
+        transform: scale(1.5);
     }
 
     .information {
@@ -870,6 +876,7 @@ html {
 
 @media(max-width:767px) {
     #v0 {
+        transform: scale(1);
         transform: scaleY(1.8) !important;
     }
 
@@ -1820,9 +1827,10 @@ a.current_dot {
     }
 
     .slider {
-        height: 45%;
-        padding-top: 0px;
+        height: 55% !important;
+        padding-top: 40px !important;
     }
+    
 
     .mini-dots2 {
         position: absolute;
@@ -1886,6 +1894,7 @@ a.current_dot {
         width: 100%;
         margin-left: 0;
         height: 43px;
+        margin-left: 0px !important;
     }
 
     .face4-items .item a {
