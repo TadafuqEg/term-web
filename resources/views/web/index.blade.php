@@ -6,8 +6,10 @@
     <title>Term</title>
     <link rel="stylesheet" href="{{asset("css/style.css")}}" />
     <link rel="icon" href="{{asset("assets/imgs/TERM fav.png")}}" type="image/x-icon">
-    <link rel="preload" as="video" href="https://static.term.ae/assets/imgs/term_vid32.webm">
-    <link rel="prefetch" as="video" href="https://static.term.ae/">
+    <link rel="preload" as="video" href="{{asset('assets/imgs/desktop-video.mp4')}}">
+    <link rel="preload" as="video" href="{{asset('assets/imgs/vid tablet-1.mp4')}}">
+    <link rel="preload" as="video" href="{{asset('assets/imgs/vid movile.mp4')}}">
+    <link rel="prefetch" as="video" href="https://term.ae/">
     <style>
         #set-height {
             display: block;
@@ -28,10 +30,46 @@
         }
         .none{
             height: 100vh;
-            display: none;
+            display: none !important;
         }
         .blok{
             display: block;
+        }
+        .skip-video{
+            position: absolute;
+            padding:15px 25px;
+            top:87% !important;
+            right:70px;
+            background:#F85C3D;
+            color:#fff;
+            border:1px solid #fff;
+            z-index: 9999;
+            text-decoration: none;
+            border-radius:18px;
+            font-size:22px;
+            font-weight:bold;
+        }
+        .skip-video:hover{
+            background:#fff;
+            color:#F85C3D;
+            border:1px solid #F85C3D;
+        }
+        
+        @media(max-width:767px){
+            .skip-video{
+            position: absolute;
+            padding:10px 15px;
+            top:87% !important;
+            right:30px;
+            background:#F85C3D;
+            color:#fff;
+            border:1px solid #fff;
+            z-index: 9999;
+            text-decoration: none;
+            border-radius:18px;
+            font-size:18px;
+            font-weight:bold;
+        }
         }
     </style>
 </head>
@@ -67,11 +105,12 @@
                 </g>
             </svg>
         </div>
-        <div id="set-height"></div>
-        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="auto" src="https://static.term.ae/assets/imgs/term_vid32.webm" type="video/mp4" autoplay
+        <div id="set-height"><a href="{{route('web.homepage')}}" class="skip-video">Skip Video</a></div>
+        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="auto" src="{{asset("assets/imgs/desktop-video.mp4")}}" type="video/mp4" autoplay
             muted>
+            
         </video>
-
+        
         <div class="homepage home" id="home">
             <div class="home-back lazy-background" data-src="{{asset("assets/imgs/img20.jpg")}}">
                 <div class="nav">
@@ -155,35 +194,53 @@
 
         });
     </script>
+    <!-- change video source -->
     <script defer>
         function changeVideoSource() {
-            const tabletMediaQuery = window.matchMedia('(max-width: 900px)'); // Adjust the breakpoint for tablets
+            const tabletMediaQuery = window.matchMedia('(max-width: 1025px)'); // Adjust the breakpoint for tablets
 
             if (tabletMediaQuery.matches) {
                 // Tablet screen size, change the video source
-                document.getElementById('v0').src = './assets/imgs/Tablet.mp4'; // Replace with tablet video source
+                document.getElementById('v0').src = './assets/imgs/vid tablet-1.mp4'; // Replace with tablet video source
             } 
             // Reload the video
             const video = document.getElementById('v0');
             video.load();
         }
-        function changeVideoSource2() {
-            const tabletMediaQuery = window.matchMedia('(max-width:767px)'); // Adjust the breakpoint for tablets
+        // function changeVideoSource2() {
+        //     const tabletMediaQuery = window.matchMedia('(max-width: 767px)'); // Adjust the breakpoint for tablets
 
-            if (tabletMediaQuery.matches) {
-                // Tablet screen size, change the video source
-                document.getElementById('v0').src = './assets/imgs/Mobile Ren 1.mp4'; // Replace with tablet video source
-            } 
-            // Reload the video
-            const video = document.getElementById('v0');
-            video.load();
-        }
+        //     if (tabletMediaQuery.matches) {
+        //         // Tablet screen size, change the video source
+        //         document.getElementById('v0').src = './assets/imgs/vid movile.mp4'; // Replace with tablet video source
+        //     } 
+        //     // Reload the video
+        //     const video = document.getElementById('v0');
+        //     video.load();
+        // }
 
         // Call the function initially and listen for resize events
         changeVideoSource();
 
-        window.addEventListener('resize', changeVideoSource2);
     </script>
+    <script defer>
+        function changeVideoSource2() {
+            const tabletMediaQuery = window.matchMedia('(max-width: 767px)'); // Adjust the breakpoint for tablets
+
+            if (tabletMediaQuery.matches) {
+                // Tablet screen size, change the video source
+                document.getElementById('v0').src = './assets/imgs/vid movile.mp4'; // Replace with tablet video source
+            } 
+            // Reload the video
+            const video = document.getElementById('v0');
+            video.load();
+        }
+        
+
+        // Call the function initially and listen for resize events
+        changeVideoSource2();
+
+    </script> 
     <!-- video script -->
     <script defer>       
         var vid = document.getElementById('v0');
@@ -193,10 +250,10 @@
             speed = 0.1;
         vid.addEventListener('wheel', function(e) {
         if (e.deltaY > 0) {
-            vid.currentTime += 0.1;
+            vid.currentTime += 0.015;
 
         } else {
-            vid.currentTime -= 0.1;
+            vid.currentTime -= 0.2;
            
         }
          });
