@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"> -->
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/materialize-stepper@2.1.4/materialize-stepper.css" rel="stylesheet">
@@ -14,11 +14,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
     <link rel="icon" href="{{asset("assets/imgs/TERM fav.png")}}" type="image/x-icon">
     <title>term-getquotation</title>
-    <link rel="stylesheet" href="{{asset("css/style.css")}}">
+    <!-- <link rel="stylesheet" href="{{asset("css/style.css")}}"> -->
     <link rel="stylesheet" href="{{asset("css/new-form.css")}}">
     
     <style> 
-     .select2-selection ,.select2-container{
+     /* html{
+        background:red !important;
+     }
+     .getqu {
+        width:100%;
+        height:100vh;
+        overflow:auto;
+        background:transparent !important;
+     } */
+
+
+
+
+     /* .select2-selection ,.select2-container{
             min-width: 250px !important;
         }
       #wrapper {
@@ -182,6 +195,7 @@
       background-color: red;
       color: #fff;
      }
+     
      .getqu .nav .active{
       height:auto !important;
      }
@@ -195,7 +209,7 @@
        top: -30px;
        left: 16px;
        z-index: 999999;
-     }
+     } */
     </style>
 
 </head>
@@ -256,7 +270,7 @@
                                         <input id="last-name" class="did-floating-input" type="text" name="last_phone" placeholder=" ">
         
                                     </div>
-                                    <div class="input-1 did-floating-label-content">
+                                    <div class="input-1 input-11 did-floating-label-content">
                                         <label class="did-floating-label" for="phone">Phone</label>
                                         <input id="phone" class="did-floating-input" type="text" name="phone" placeholder=" ">
         
@@ -313,7 +327,7 @@
                                         <input id="city" class="did-floating-input" type="text" name="city" placeholder=" ">
         
                                     </div>
-                                    <div class="input-2 did-floating-label-content">
+                                    <div class="input-2 input-12 did-floating-label-content">
                                         <label class="did-floating-label" for="">State</label>
                                         <div class="center">
                                             {{-- <select name="sources" id="sources" name="state" class="custom-select sources"
@@ -334,7 +348,7 @@
                             <div class="play-button-container">
                                 <div class="play-button">
                                     <span class="content">Next Step</span>
-                                    <span class="play-icon"><img src="./play (1).svg" /></span>
+                                    <span class="play-icon"><img src="{{asset("assets/imgs/play (1).svg")}}" /></span>
                                 </div>
                                
                             </div>
@@ -485,19 +499,19 @@
                                             <button class="month9" id="month9">Last 9 months</button>
                                             <button class="year" id="year">Last Year</button> -->
                                             <label>
-                                                <input type="checkbox" name="service_delivery_formula_are_you_interested_in_2" value="3month">
+                                                <input type="radio" name="service_delivery_formula_are_you_interested_in_2" value="3month">
                                                 <div class="social-button">Last 3 months</div>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="service_delivery_formula_are_you_interested_in_2" value="6month">
+                                                <input type="radio" name="service_delivery_formula_are_you_interested_in_2" value="6month">
                                                 <div class="social-button">Last 6 months</div>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="service_delivery_formula_are_you_interested_in_2" value="9month">
+                                                <input type="radio" name="service_delivery_formula_are_you_interested_in_2" value="9month">
                                                 <div class="social-button">Last 9 months</div>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="service_delivery_formula_are_you_interested_in_2" value="year">
+                                                <input type="radio" name="service_delivery_formula_are_you_interested_in_2" value="year">
                                                 <div class="social-button">Last Year</div>
                                             </label>
         
