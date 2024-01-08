@@ -95,7 +95,7 @@
 									</span>
 									<!--end:Menu link-->
 									<!--begin:Menu sub-->
-									<div class="menu-sub menu-sub-accordion">
+									{{-- <div class="menu-sub menu-sub-accordion">
 										<!--begin:Menu item-->
 										<div class="menu-item">
 											<!--begin:Menu link-->
@@ -104,6 +104,22 @@
 													<span class="bullet bullet-dot"></span>
 												</span>
 												<span class="menu-title">Quotation form list</span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+									</div> --}}
+									<!--end:Menu sub-->
+									<!--begin:Menu sub-->
+									<div class="menu-sub menu-sub-accordion">
+										<!--begin:Menu item-->
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" href="{{route('dashboard.client-intake-form.index')}}">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">Client intake form list</span>
 											</a>
 											<!--end:Menu link-->
 										</div>
