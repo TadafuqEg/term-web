@@ -127,13 +127,13 @@ study online presence (Please separate different URL with a ";" if there are mul
                     <label for="exampleInputEmail1">
                         Social Listening - Please select the analyses you would like to be included in your study
                     </label>
-                    <input type="text" class="form-control" readonly value="{{$clientIntakeForm->social_Listening_analyses_you_would_like_to_be_included_in_your_study??''}}">
+                    <input type="text" class="form-control" readonly value="{{$clientIntakeForm->social_Listening_analyses_you_would_like_to_be_included??''}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">
                         Social Presence - Please select the analyses you would like to be included in your study
                     </label>
-                    <input type="text" class="form-control" readonly value="{{$clientIntakeForm->social_Presence_analyses_you_would_like_to_be_included_in_your_study??''}}">
+                    <input type="text" class="form-control" readonly value="{{$clientIntakeForm->social_Presence_analyses_you_would_like_to_be_included??''}}">
                   </div>
 
                 
