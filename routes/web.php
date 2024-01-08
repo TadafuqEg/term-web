@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientIntakeFormController;
+use App\Http\Controllers\Dashboard\ClientIntakeFormController as ClientIntakeFormDashboard;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\ContactUsController;
@@ -33,6 +34,8 @@ Route::get('/dashboard/quotations/modify',[QuotationDashboard::class,'modify'])-
 Route::get('/dashboard/quotations/index',[QuotationDashboard::class,'index'])->name('dashboard.quotation.index');
 Route::get('/dashboard/quotations-forms/list',[QuotationFormDashboard::class,'list'])->name('dashboard.quotation-form.index');
 Route::get('/dashboard/quotations-forms/export-pdf/{formId}',[QuotationFormDashboard::class,'exportPDF'])->name('dashboard.quotation-form.export.pdf');
+Route::get('/dashboard/client-intake-forms/list',[ClientIntakeFormDashboard::class,'list'])->name('dashboard.client-intake-form.index');
+Route::get('/dashboard/client-intake-forms-show/{id}',[ClientIntakeFormDashboard::class,'show'])->name('dashboard.client-intake-form.show');
 
 Route::post('quotation-form/store',[QuotationFromWeb::class,'store'])->name('web.quotation.store');
 Route::post('client-intake-form/store',[ClientIntakeFormController::class,'store'])->name('web.ClientIntakeForm.store');

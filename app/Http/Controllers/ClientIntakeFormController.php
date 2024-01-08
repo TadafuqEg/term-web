@@ -17,9 +17,26 @@ class ClientIntakeFormController extends Controller
             }
         }
         $data = $request->all();
-        $data['research_sources_you_would_like_us_to_explore'] = serialize($data['research_sources_you_would_like_us_to_explore']);
-        $data['social_Listening_analyses_you_would_like_to_be_included_in_your_study'] = serialize($data['social_Listening_analyses_you_would_like_to_be_included_in_your_study']);
-        $data['social_Presence_analyses_you_would_like_to_be_included_in_your_study'] = serialize($data['social_Presence_analyses_you_would_like_to_be_included_in_your_study']);
+        $data['specific_period'] = null;
+        if(isset($data['date_from'])){
+            $data['specific_period'] = $data['specific_period'].$data['date_from'];
+        }
+        if(isset($data['date_to'])){
+            $data['specific_period'] = $data['specific_period'].' / '.$data['date_to'];
+        }
+        if(isset($data['research_sources_you_would_like_us_to_explore']))
+        {
+            $data['research_sources_you_would_like_us_to_explore'] = serialize($data['research_sources_you_would_like_us_to_explore']);
+        }
+        if(isset($data['social_Listening_analyses_you_would_like_to_be_included_in_your_study']))
+        {
+            $data['social_Listening_analyses_you_would_like_to_be_included_in_your_study'] = serialize($data['social_Listening_analyses_you_would_like_to_be_included_in_your_study']);
+        }
+        if(isset($data['social_Presence_analyses_you_would_like_to_be_included_in_your_study']))
+        {
+            $data['social_Presence_analyses_you_would_like_to_be_included_in_your_study'] = serialize($data['social_Presence_analyses_you_would_like_to_be_included_in_your_study']);
+        }
+        
         ClientIntakeForm::create($data);
         return redirect()->route('web.thanks');
     }
