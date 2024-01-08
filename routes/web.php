@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientIntakeFormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\ContactUsController;
@@ -34,6 +35,7 @@ Route::get('/dashboard/quotations-forms/list',[QuotationFormDashboard::class,'li
 Route::get('/dashboard/quotations-forms/export-pdf/{formId}',[QuotationFormDashboard::class,'exportPDF'])->name('dashboard.quotation-form.export.pdf');
 
 Route::post('quotation-form/store',[QuotationFromWeb::class,'store'])->name('web.quotation.store');
+Route::post('client-intake-form/store',[ClientIntakeFormController::class,'store'])->name('web.ClientIntakeForm.store');
 
 Route::view('/','web.index')->name('web.index');
 Route::view('/homepage','web.homepage')->name('web.homepage');
@@ -42,6 +44,7 @@ Route::view('/services','web.services')->name('web.services');
 Route::view('/proficiencies','web.proficiencies')->name('web.proficiencies');
 Route::view('/contact-us','web.contact-us')->name('web.contact-us');
 Route::get('/getquotation',[QuotationWeb::class,'quotation'])->name('web.getquotation');
+Route::get('/getquotation-v2',[QuotationWeb::class,'quotationV2'])->name('web.getquotationV2');
 Route::view('/act','web.act')->name('web.act');
 Route::view('/act-andmore','web.act-andmore')->name('web.act-andmore');
 Route::view('/act-more','web.act-more')->name('web.act-more');
