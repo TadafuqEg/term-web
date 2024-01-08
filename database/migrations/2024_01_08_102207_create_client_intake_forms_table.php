@@ -36,8 +36,8 @@ return new class extends Migration
             $table->text('service_delivery_formula_are_you_interested_in_2')->nullable();
             $table->text('specific_period')->nullable();
             $table->text('information_believe_important_for_successful_completion_study')->nullable();
-            $table->text('social_Listening_analyses_you_would_like_to_be_included_in_your_study')->nullable();
-            $table->text('social_Presence_analyses_you_would_like_to_be_included_in_your_study')->nullable();
+            $table->text('social_Listening_analyses_you_would_like_to_be_included')->nullable();
+            $table->text('social_Presence_analyses_you_would_like_to_be_included')->nullable();
             $table->timestamps();
         });
     }

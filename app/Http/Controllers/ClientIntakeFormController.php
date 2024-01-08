@@ -28,13 +28,13 @@ class ClientIntakeFormController extends Controller
         {
             $data['research_sources_you_would_like_us_to_explore'] = serialize($data['research_sources_you_would_like_us_to_explore']);
         }
-        if(isset($data['social_Listening_analyses_you_would_like_to_be_included_in_your_study']))
+        if(isset($data['social_Listening_analyses_you_would_like_to_be_included']))
         {
-            $data['social_Listening_analyses_you_would_like_to_be_included_in_your_study'] = serialize($data['social_Listening_analyses_you_would_like_to_be_included_in_your_study']);
+            $data['social_Listening_analyses_you_would_like_to_be_included'] = serialize($data['social_Listening_analyses_you_would_like_to_be_included']);
         }
-        if(isset($data['social_Presence_analyses_you_would_like_to_be_included_in_your_study']))
+        if(isset($data['social_Presence_analyses_you_would_like_to_be_included']))
         {
-            $data['social_Presence_analyses_you_would_like_to_be_included_in_your_study'] = serialize($data['social_Presence_analyses_you_would_like_to_be_included_in_your_study']);
+            $data['social_Presence_analyses_you_would_like_to_be_included'] = serialize($data['social_Presence_analyses_you_would_like_to_be_included']);
         }
         
         ClientIntakeForm::create($data);

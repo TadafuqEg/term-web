@@ -558,71 +558,71 @@
                         <div class="listening-tabs">
                             <div class="flex btn1">
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Document collection & distribution by source">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Document collection & distribution by source">
                                     <div class="social-button">Document collection & distribution by source</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Document distribution by languagee">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Document distribution by languagee">
                                     <div class="social-button">Document distribution by language</div>
                                 </label>
                             </div>
                             <div class="flex btn2">
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Document Distribution by Users Gender">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Document Distribution by Users Gender">
                                     <div class="social-button">Document Distribution by Users Gender</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Geographical Analysise">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Geographical Analysise">
                                     <div class="social-button">Geographical Analysis</div>
                                 </label>
                             </div>
                             <div class="flex btn3">
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Sentiment Analysise">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Sentiment Analysise">
                                     <div class="social-button">Sentiment Analysis</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Sentiment Analysis by source">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Sentiment Analysis by source">
                                     <div class="social-button">Sentiment Analysis by source</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Key Positive Topicse">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Key Positive Topicse">
                                     <div class="social-button">Key Positive Topics</div>
                                 </label>
                             </div>
                             <div class="flex btn4">
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Key Positive Themes & Hashtags">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Key Positive Themes & Hashtags">
                                     <div class="social-button">Key Positive Themes & Hashtags</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Positive Influencers Identificatione">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Positive Influencers Identificatione">
                                     <div class="social-button">Positive Influencers Identification</div>
                                 </label>
                             </div>
                             <div class="flex btn5">
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Positive Influencers Profiling">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Positive Influencers Profiling">
                                     <div class="social-button">Positive Influencers Profiling</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Key Negative Topicse">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Key Negative Topicse">
                                     <div class="social-button">Key Negative Topics</div>
                                 </label>
                             </div>
                             <div class="flex btn6">
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Key Negative Themes & Hashtags">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Key Negative Themes & Hashtags">
                                     <div class="social-button">Key Negative Themes & Hashtags</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Negative Influencers Identificatione">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Negative Influencers Identificatione">
                                     <div class="social-button">Negative Influencers Identification</div>
                                 </label>
                             </div>
                             <div class="flex btn7">
                                 <label>
-                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included_in_your_study[]" value="Negative Influencers Profilinge">
+                                    <input type="checkbox" name="social_Listening_analyses_you_would_like_to_be_included[]" value="Negative Influencers Profilinge">
                                     <div class="social-button">Negative Influencers Profiling</div>
                                 </label>
                             </div>
@@ -652,82 +652,82 @@
                         <div class="listening-tabs">
                             <div class="flex btn1">
                                <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Social Presence distribution by platform">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Social Presence distribution by platform">
                                     <div class="social-button">Social Presence distribution by platform</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Social Media Influence Scores By Platform">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Social Media Influence Scores By Platform">
                                     <div class="social-button">Social Media Influence Scores By Platform</div>
                                 </label>
                             </div>
                             <div class="flex btn2">
                                <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Engagement Performances By source">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Engagement Performances By source">
                                     <div class="social-button">Engagement Performances By source</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Social presence Topic">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Social presence Topic">
                                     <div class="social-button">Social presence Topics</div>
                                 </label>
                             </div>
                             <div class="flex btn2">
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Engagement Performances by Topic for each source">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Engagement Performances by Topic for each source">
                                     <div class="social-button">Engagement Performances by Topic for each source</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Social Presence by frequency / periods">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Social Presence by frequency / periods">
                                     <div class="social-button">Social Presence by frequency / periods</div>
                                 </label>
                             </div>
                             <div class="flex btn3">
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Facebook page Tops">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Facebook page Tops">
                                     <div class="social-button">Facebook page Tops</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="X (Twitter) account">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="X (Twitter) account">
                                     <div class="social-button">X (Twitter) account</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Instagram account">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Instagram account">
                                     <div class="social-button">Instagram account</div>
                                 </label>
                             </div>
                             <div class="flex btn4">
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Authenticity Analysis of Active Profiles">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Authenticity Analysis of Active Profiles">
                                     <div class="social-button">Authenticity Analysis of Active Profiles</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Activity Distribution by Profile">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Activity Distribution by Profile">
                                     <div class="social-button">Activity Distribution by Profile</div>
                                 </label>
                             </div>
                             <div class="flex btn5">
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Negative Spreading by Profile Type">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Negative Spreading by Profile Type">
                                     <div class="social-button">Negative Spreading by Profile Type</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Top inauthentic Profile (Facebook)">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Top inauthentic Profile (Facebook)">
                                     <div class="social-button">Top inauthentic Profile (Facebook)</div>
                                 </label>
                             </div>
                             <div class="flex btn6">
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Top inauthentic Profile (X)">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Top inauthentic Profile (X)">
                                     <div class="social-button">Top inauthentic Profile (X)</div>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Top inauthentic Profile (Instagram)">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Top inauthentic Profile (Instagram)">
                                     <div class="social-button">Top inauthentic Profile (Instagram)</div>
                                 </label>
                             </div>
                             <div class="flex btn7">
                                
                                 <label>
-                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included_in_your_study[]" value="Bots identification (TOP25)">
+                                    <input type="checkbox" name="social_Presence_analyses_you_would_like_to_be_included[]" value="Bots identification (TOP25)">
                                     <div class="social-button">Bots identification (TOP25)</div>
                                 </label>
                             </div>
