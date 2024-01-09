@@ -211,12 +211,14 @@ html {
 }
 
 form {
-    width: 90%;
+    width:85%;
     margin: auto;
     height: auto;
     background-color: #000;
-    padding-bottom: 50px;
+    padding:0 30px;
+    padding-bottom:0px;
     border-radius: 12px;
+    margin-bottom: 30px;
 }
 
 input.hidden {
@@ -245,7 +247,6 @@ fieldset:valid>.enable-when-valid {
     background-color: #000;
     margin-bottom: 40px;
 }
-
 .show-when-checked {
     width: 98%;
     border: none;
@@ -305,7 +306,7 @@ fieldset:valid>.enable-when-valid {
      color: #F85C3D;
  }
  .input-12 input{
-    width: 90%;
+    width: 90.5%;
  }
 .input-4 {
     width: 100%;
@@ -745,6 +746,7 @@ select::-ms-expand {
     width: 90%;
     margin: auto;
     border: 1px solid #fff;
+    text-align: center;
 }
 
 .social-button:hover {
@@ -921,10 +923,11 @@ input[type="checkbox"]:checked+.social-button {
 }
 
 .F-P {
-    width: 30%;
+    width: 35%;
     margin-right: 30PX;
     font-size: 30PX;
     font-weight: 600;
+    padding-left: 5%;
 }
 
 .L-P {
