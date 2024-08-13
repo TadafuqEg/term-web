@@ -98,3 +98,11 @@ Route::get('/social_intelligence', function () {
 Route::get('/reputation_management', function () {
     return response()->file(public_path('assets/TERM_Reputation_Rundown_2024.pdf'));
 })->name('reputation_management');
+
+Route::get('/company_profile_compact', function () {
+    return response()->file(public_path('assets/TERM_Company_Profile_2024__Compact.pdf'));
+})->name('company_profile_compact');
+
+Route::get('/executive_summary', function () {
+    return response()->file(public_path('assets/TERM_Executive_Summary_2024.pdf'));
+})->name('executive_summary');
