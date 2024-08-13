@@ -86,3 +86,15 @@ Route::get('cities-select-options/{countryId}',function($countryId){
     $cities = DB::select('SELECT  id , name FROM `cities` where country_id=\''.$countryId.'\' ');
     return view('web.ajax.city-option',compact('cities'));
 })->name('city-select-option');
+
+Route::get('/company_profile', function () {
+    return response()->file(public_path('assets/TERM_Company_Profile_2024.pdf'));
+})->name('company_profile');
+
+Route::get('/social_intelligence', function () {
+    return response()->file(public_path('assets/TERM_Intelligence_Insights_2024.pdf'));
+})->name('social_intelligence');
+
+Route::get('/reputation_management', function () {
+    return response()->file(public_path('assets/TERM_Reputation_Rundown_2024.pdf'));
+})->name('reputation_management');
